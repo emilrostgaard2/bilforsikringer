@@ -28,7 +28,7 @@ jobs:
             set net:reconnect-interval-multiplier 1.5;
             set mirror:parallel-directories false;
             set mirror:parallel-transfer-count 1;
-            open -u '\$BRUGER','\$KODE' '\$SERVER';
+            open -u '$BRUGER','$KODE' '$SERVER';
             mirror --reverse --only-newer --continue --verbose=1 \
               --exclude-glob .git/ \
               --exclude-glob .github/ \

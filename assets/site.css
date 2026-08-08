@@ -146,3 +146,31 @@ main > .bfn-hero,main > .bfn-full,main > section[class*="bfn-"]{max-width:none;p
   .hd,.burger,.skip{display:none}
   body{font-size:11pt;color:#000}
 }
+
+/* ---------- layout-containere (erstatter Elementors frontend.css) ---------- */
+.e-con{
+  --content-width:min(100%,1140px);
+  position:relative;width:100%;min-width:0;
+}
+.e-con-boxed{display:flex;flex-direction:column;align-items:normal}
+.e-con-inner{
+  width:var(--content-width);max-width:1140px;
+  margin-left:auto;margin-right:auto;
+  display:flex;flex-direction:column;gap:20px;
+  padding-left:1.25em;padding-right:1.25em;
+}
+.e-flex{display:flex;flex-direction:column;gap:20px}
+.e-grid{display:grid;gap:20px}
+.elementor-widget-container{min-width:0}
+.entry-content > *:first-child{margin-top:0}
+
+/* dine egne fuldbredde-sektioner må bryde ud af containeren */
+.e-con-inner > section[class*="bfn-"],
+.e-con-inner > .bfn-hero,
+.e-con-inner > .bfn-full{
+  width:100vw;max-width:100vw;
+  margin-left:calc(50% - 50vw);margin-right:calc(50% - 50vw);
+}
+@media (max-width:900px){
+  .e-con-inner{padding-left:1em;padding-right:1em;gap:16px}
+}

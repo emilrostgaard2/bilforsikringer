@@ -139,7 +139,7 @@
       });
       io.unobserve(en.target);
     });
-  }, { rootMargin: '0px 0px -12% 0px', threshold: 0.08 }) : null;
+  }, { rootMargin: '0px 0px -5% 0px', threshold: 0 }) : null;
 
   $$('.rv').forEach(function (el) {
     if (io) io.observe(el);

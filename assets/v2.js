@@ -55,12 +55,28 @@
   });
 
   /* ── Navigation: burger + dropdowns på touch ── */
-  var burger = $('.burger'), nav = $('.nav');
+  /* MENU-LÅS */
+  var burger = $('.burger'), nav = $('.nav'), scrollY = 0;
+  function setMenu(open) {
+    if (!nav) return;
+    nav.classList.toggle('open', open);
+    if (burger) burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (open) {
+      scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = -scrollY + 'px';
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY);
+    }
+  }
   if (burger && nav) {
-    burger.addEventListener('click', function () {
-      var open = nav.classList.toggle('open');
-      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
-      document.body.style.overflow = open ? 'hidden' : '';
+    burger.addEventListener('click', function (e) {
+      e.preventDefault();
+      setMenu(!nav.classList.contains('open'));
     });
   }
   $$('.nav > .item').forEach(function (item) {
@@ -78,16 +94,13 @@
     a.addEventListener('click', function () {
       if (window.innerWidth <= 900 && nav && nav.classList.contains('open')
           && !a.parentNode.querySelector('.drop')) {
-        nav.classList.remove('open');
-        document.body.style.overflow = '';
-        if (burger) burger.setAttribute('aria-expanded', 'false');
+        setMenu(false);
       }
     });
   });
   window.addEventListener('resize', function () {
     if (window.innerWidth > 900 && nav) {
-      nav.classList.remove('open');
-      document.body.style.overflow = '';
+      setMenu(false);
       $$('.nav > .item.on').forEach(function (i) { i.classList.remove('on'); });
     }
   });
@@ -95,11 +108,7 @@
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
     $$('.nav > .item.on').forEach(function (i) { i.classList.remove('on'); });
-    if (nav && nav.classList.contains('open')) {
-      nav.classList.remove('open');
-      document.body.style.overflow = '';
-      if (burger) burger.setAttribute('aria-expanded', 'false');
-    }
+    if (nav && nav.classList.contains('open')) setMenu(false);
   });
 
   /* ── FAQ ── */

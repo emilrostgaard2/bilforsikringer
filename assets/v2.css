@@ -719,3 +719,33 @@ h1 .g{color:var(--green);white-space:nowrap}
 .filt:hover{background:var(--wash-2)}
 .filt.on{background:var(--teal);border-color:var(--teal);color:#fff}
 .count{font-size:.85rem;color:var(--muted);margin-top:14px}
+
+/* ── selskabsside ── */
+.co-hero{display:flex;gap:22px;align-items:flex-start;flex-wrap:wrap;margin-bottom:22px}
+.co-hero h1{margin:8px 0 .3em}
+.co-hero .cd-badge{margin-bottom:0}
+.pricebar{
+  display:grid;gap:1px;background:var(--line);border:1px solid var(--line);
+  border-radius:var(--r);overflow:hidden;margin-top:6px;
+  grid-template-columns:1fr;
+}
+@media(min-width:640px){.pricebar{grid-template-columns:repeat(3,1fr)}}
+.pb{background:var(--paper);padding:16px 20px;display:flex;flex-direction:column;gap:2px}
+.pb-l{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.pb-v{font-family:var(--mono);font-size:1.35rem;font-weight:600;color:var(--ink);letter-spacing:-.02em}
+.pb-v.pb-t{font-family:var(--sans);font-size:1rem;font-weight:700}
+.pb-s{font-size:.78rem;color:var(--faint)}
+
+.prosCons{display:grid;gap:16px;margin-top:24px}
+@media(min-width:720px){.prosCons{grid-template-columns:1fr 1fr}}
+.pc{border-radius:var(--r);padding:22px;box-shadow:var(--sh-1)}
+.pc h3{margin:0 0 12px;font-size:1rem}
+.pc ul{margin:0;padding-left:0;list-style:none;display:grid;gap:9px}
+.pc li{position:relative;padding-left:26px;font-size:.9rem;line-height:1.5}
+.pc li::before{position:absolute;left:0;top:0;font-weight:800}
+.pc-plus{background:var(--green-soft);border:1px solid #b7ddc7}
+.pc-plus h3{color:var(--green-deep)}
+.pc-plus li::before{content:"✓";color:var(--green)}
+.pc-minus{background:var(--gold-soft);border:1px solid #ecd39a}
+.pc-minus h3{color:#7a5510}
+.pc-minus li::before{content:"!";color:#b8862a}

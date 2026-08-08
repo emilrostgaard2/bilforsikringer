@@ -601,3 +601,31 @@ h1 .g{color:var(--green);white-space:nowrap}
   .rv{opacity:1;transform:none}
 }
 @media print{.hd,.sticky,.cta,.burger{display:none}}
+
+/* logo i dropdown */
+.drop-logo{
+  width:52px;height:34px;flex-shrink:0;border-radius:8px;background:#fff;
+  border:1px solid var(--line);display:grid;place-items:center;padding:4px;
+}
+.drop-logo img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+.drop-item:hover .drop-logo{border-color:var(--line-2)}
+
+/* logo-header på selskabssider */
+.co-head{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:18px}
+.co-logo{
+  width:120px;height:74px;flex-shrink:0;background:#fff;border:1px solid var(--line);
+  border-radius:var(--r);display:grid;place-items:center;padding:12px;box-shadow:var(--sh-1);
+}
+.co-logo img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
+
+/* logo-væg */
+.logowall{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:22px}
+@media(min-width:560px){.logowall{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:880px){.logowall{grid-template-columns:repeat(5,1fr)}}
+.lw{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  height:82px;display:grid;place-items:center;padding:14px;
+  transition:border-color .18s,transform .18s var(--ease),box-shadow .18s;
+}
+.lw:hover{border-color:var(--line-2);transform:translateY(-3px);box-shadow:var(--sh-1)}
+.lw img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}

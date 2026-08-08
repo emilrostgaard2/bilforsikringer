@@ -74,6 +74,24 @@
       }
     });
   });
+  $$('.nav a[href]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      if (window.innerWidth <= 900 && nav && nav.classList.contains('open')
+          && !a.parentNode.querySelector('.drop')) {
+        nav.classList.remove('open');
+        document.body.style.overflow = '';
+        if (burger) burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > 900 && nav) {
+      nav.classList.remove('open');
+      document.body.style.overflow = '';
+      $$('.nav > .item.on').forEach(function (i) { i.classList.remove('on'); });
+    }
+  });
+
   document.addEventListener('keydown', function (e) {
     if (e.key !== 'Escape') return;
     $$('.nav > .item.on').forEach(function (i) { i.classList.remove('on'); });

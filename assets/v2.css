@@ -572,23 +572,46 @@ h1 .g{color:var(--green);white-space:nowrap}
 }
 @media(max-width:900px){
   .hd-cta{display:none}
-  .burger{display:block}
+  .burger{display:block;margin-left:auto}
+  .hd-in{height:60px;gap:12px}
+  .brand-sub{display:none}
   .nav{
-    position:fixed;inset:68px 0 auto;background:var(--paper);border-bottom:1px solid var(--line);
-    flex-direction:column;align-items:stretch;gap:0;padding:10px clamp(18px,4vw,44px) 20px;
-    max-height:calc(100dvh - 68px);overflow-y:auto;display:none;box-shadow:var(--sh-2);
+    position:fixed;left:0;right:0;top:60px;bottom:0;margin:0;
+    background:var(--paper);border-top:1px solid var(--line);
+    flex-direction:column;align-items:stretch;gap:0;
+    padding:8px clamp(18px,4vw,44px) 40px;
+    overflow-y:auto;-webkit-overflow-scrolling:touch;
+    display:none;z-index:250;
   }
-  .nav.open{display:flex}
-  .nav > .item > a{padding:14px 0;border-bottom:1px solid var(--line);border-radius:0;font-size:1rem}
+  .nav.open{display:block}
+  .nav > .item{border-bottom:1px solid var(--line)}
+  .nav > .item > a{
+    padding:16px 2px;border-radius:0;font-size:1.02rem;font-weight:700;
+    color:var(--ink);justify-content:space-between;
+  }
+  .nav > .item > a:hover,.nav > .item.on > a{background:none;color:var(--teal-ink)}
+  .caret{width:12px;height:12px;opacity:.8}
   .drop{
-    position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;
-    border:0;border-radius:0;padding:4px 0 12px;min-width:0;background:none;
-    display:none;
+    position:static;transform:none;opacity:1;visibility:visible;
+    box-shadow:none;border:0;border-radius:0;padding:0 0 12px;
+    min-width:0;background:none;display:none;
   }
   .nav > .item.on .drop{display:block}
-  .drop-grid{grid-template-columns:1fr}
+  .drop-grid{grid-template-columns:1fr;gap:0}
+  .drop-item{padding:12px 0 12px 4px;border-radius:0}
+  .drop-item:hover{background:none}
   .drop-foot{display:none}
   .cres{grid-template-columns:1fr}
+  .pricebar{grid-template-columns:1fr}
+  .co-hero{gap:16px}
+  .co-hero .co-logo{width:92px;height:58px}
+  .crow{grid-template-columns:1fr}
+  .crow .val{text-align:left}
+  .bar-row{grid-template-columns:1fr auto;gap:6px 12px}
+  .bar-track{grid-column:1/-1}
+  .sticky-in{gap:8px;padding-block:9px}
+  .step{gap:14px}
+  .author-img{width:84px;height:84px}
 }
 @media(max-width:520px){
   body{font-size:16px}
@@ -749,3 +772,12 @@ h1 .g{color:var(--green);white-space:nowrap}
 .pc-minus{background:var(--gold-soft);border:1px solid #ecd39a}
 .pc-minus h3{color:#7a5510}
 .pc-minus li::before{content:"!";color:#b8862a}
+
+/* selskabsside: hero med CTA */
+.co-split{display:grid;gap:28px;align-items:start}
+@media(min-width:900px){.co-split{grid-template-columns:1.15fr .85fr;gap:44px}}
+.hero-cta{
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:22px;box-shadow:var(--sh-2);
+}
+.hero-cta .btn{margin-top:12px}

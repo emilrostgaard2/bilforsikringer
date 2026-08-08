@@ -172,3 +172,26 @@
     });
   }
 })();
+
+/* Filtrering på artikeloversigten */
+(function(){
+  var grid=document.getElementById('artGrid');
+  if(!grid) return;
+  var cards=Array.prototype.slice.call(grid.children);
+  var count=document.getElementById('artCount');
+  document.querySelectorAll('.filt').forEach(function(b){
+    b.addEventListener('click',function(){
+      document.querySelectorAll('.filt').forEach(function(x){x.classList.remove('on')});
+      b.classList.add('on');
+      var f=b.dataset.f,n=0;
+      cards.forEach(function(c){
+        var show=(f==='alle'||c.dataset.cat===f);
+        c.style.display=show?'':'none';
+        if(show) n++;
+      });
+      if(count) count.textContent = f==='alle'
+        ? 'Viser alle '+n+' sider'
+        : 'Viser '+n+' '+(n===1?'side':'sider');
+    });
+  });
+})();

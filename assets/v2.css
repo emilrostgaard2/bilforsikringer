@@ -602,13 +602,14 @@ h1 .g{color:var(--green);white-space:nowrap}
   .caret{width:13px;height:13px;opacity:.7;flex-shrink:0}
 
   .drop{
-    position:static;transform:none;opacity:1;visibility:visible;
-    box-shadow:none;border:0;border-radius:0;background:none;
-    min-width:0;padding:0;
-    max-height:0;overflow:hidden;
-    transition:max-height .3s var(--ease);
+    position:static !important;transform:none !important;
+    opacity:1 !important;visibility:visible !important;
+    box-shadow:none;border:0;border-radius:0;background:var(--wash);
+    min-width:0;padding:4px 10px 10px;margin:0 0 10px;
+    border-radius:10px;
+    display:none;
   }
-  .nav > .item.on .drop{max-height:1400px}
+  .nav > .item.on .drop{display:block}
   .drop::before{display:none}
   .drop-grid{display:block}
   .drop-item{padding:11px 0 11px 6px;border-radius:0;gap:12px}
@@ -797,3 +798,8 @@ h1 .g{color:var(--green);white-space:nowrap}
 
 /* tom billedboks over nummerplade-CTA fjernes */
 .bh-photo,.card-photo{display:none!important}
+
+/* indholdets egne CTA-knapper i fuld bredde */
+.bfl .cta-btn,.bfl .cta-card .cta-btn,.mid-cta-inner .cta-btn{width:100%!important;display:flex!important}
+.bfl .cta-card,.bfl .mid-cta-inner{max-width:none}
+@media(min-width:700px){.bfl .cta-card{max-width:520px;margin-inline:auto}}

@@ -162,7 +162,9 @@
       if (!en.isIntersecting) return;
       en.target.classList.add('in');
       $$('.bar-fill', en.target).forEach(function (bar, i) {
-        setTimeout(function () { bar.style.width = bar.dataset.w + '%'; }, 90 * i);
+        var w = bar.dataset.w;
+        if (w.indexOf('%') < 0) { w += '%'; }
+        setTimeout(function () { bar.style.width = w; }, 90 * i);
       });
       io.unobserve(en.target);
     });
@@ -172,7 +174,10 @@
     if (io) io.observe(el);
     else {
       el.classList.add('in');
-      $$('.bar-fill', el).forEach(function (bar) { bar.style.width = bar.dataset.w + '%'; });
+      $$('.bar-fill', el).forEach(function (bar) {
+        var w = bar.dataset.w;
+        bar.style.width = w.indexOf('%') < 0 ? w + '%' : w;
+      });
     }
   });
 

@@ -33,6 +33,6 @@ jobs:
               --exclude-glob .git/ \
               --exclude-glob .github/ \
               --exclude-glob '*.md' \
-              --exclude 'wp-content/uploads/2026/' \
+              --exclude 'billeder/' \
               ./ public_html/;
           "

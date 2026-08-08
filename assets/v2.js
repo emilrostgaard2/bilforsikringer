@@ -195,3 +195,17 @@
     });
   });
 })();
+
+/* Manglende billede → faldbak til ikon i stedet for brudt link */
+(function(){
+  var ICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">'
+    +'<path d="M5 17h14M6 17l1.5-5.5A2 2 0 0 1 9.4 10h5.2a2 2 0 0 1 1.9 1.5L18 17"/>'
+    +'<circle cx="7.5" cy="17.5" r="1.6"/><circle cx="16.5" cy="17.5" r="1.6"/></svg>';
+  document.querySelectorAll('.cd-img img, .co-l img, .lw img').forEach(function(im){
+    im.addEventListener('error',function(){
+      var w=im.parentNode;
+      w.classList.add('cd-noimg');
+      w.innerHTML=ICON;
+    });
+  });
+})();

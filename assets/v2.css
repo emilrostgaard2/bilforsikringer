@@ -1,3 +1,16 @@
+@font-face{
+  font-family:'Schibsted Grotesk';
+  src:url('/assets/fonts/schibsted-grotesk.woff2') format('woff2-variations');
+  font-weight:400 900;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:'Spline Sans Mono';
+  src:url('/assets/fonts/spline-sans-mono.woff2') format('woff2-variations');
+  font-weight:300 700;font-style:normal;font-display:swap;
+}
+/* Selvhostede variable fonte. Erstatter otte statiske filer fra Google Fonts
+   og fjerner to tredjepartsforbindelser fra den kritiske sti. */
+
 /* ============================================================
    bilforsikringer.nu — håndbygget stylesheet
    Ingen framework. Ingen WordPress. Ét ark.

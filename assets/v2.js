@@ -3,7 +3,11 @@
   'use strict';
 
   /* Affiliate-mål ét sted. Skal det ændres, ændres det her. */
-  var AFF = 'https://www.findforsikring.dk/indhent-tilbud?bil1=on&utm_source=bilforsikringer&utm_medium=web&utm_campaign=forside';
+  /* Sidespecifik sporing: utm_content sættes ud fra stien, så det kan ses
+     hvilken side der konverterer. Kræver at partneren videresender feltet. */
+  var SLUG = (location.pathname.replace(/^\/|\/$/g, '') || 'forside').replace(/\//g, '-');
+  var AFF = 'https://www.findforsikring.dk/indhent-tilbud?bil1=on&utm_source=bilforsikringer'
+          + '&utm_medium=web&utm_campaign=forside&utm_content=' + encodeURIComponent(SLUG);
 
   var $  = function (s, c) { return (c || document).querySelector(s); };
   var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };

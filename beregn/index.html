@@ -66,7 +66,7 @@
   ]
 }</script>
 <link rel="preload" as="font" type="font/woff2" crossorigin href="/assets/fonts/schibsted-grotesk.woff2">
-<link rel="stylesheet" href="/assets/v2.css?v=20260809c">
+<link rel="stylesheet" href="/assets/v2.css?v=20260809d">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -165,74 +165,72 @@
   </div>
 </header>
 <main id="main">
+<section class="hubhero">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Brødkrumme"><a href="/">Forsiden</a> <span aria-hidden="true">/</span> <a href="/artikler/">Artikler</a> <span aria-hidden="true">/</span> <span>Beregn din bilforsikring</span></nav>
+    <div class="co-split">
+      <div>
+        <span class="eyebrow">Værktøj</span>
+        <h1>Beregn din bilforsikring</h1>
+        <p class="hub-lead">Få et realistisk estimat på præmien ud fra alder, kørselsbehov og dækning — og se derefter, hvad de enkelte faktorer betyder for prisen.</p>
+      </div>
+      <div class="hero-cta">
+        <span class="cta-lab">Se din pris — indtast nummerplade</span>
+        <div class="plate">
+          <span class="plate-eu" aria-hidden="true"><span class="plate-stars">&#9733;&nbsp;&#9733;<br>&#9733;</span><span class="plate-cc">DK</span></span>
+          <input id="beregnPlate" data-plate type="text" inputmode="latin" placeholder="AB 12 345" maxlength="9" aria-label="Nummerplade" autocomplete="off" spellcheck="false">
+          <span class="plate-ok" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+        </div>
+        <button type="button" class="btn" data-go="beregnPlate">Sammenlign gratis nu <span class="arw" aria-hidden="true">&rarr;</span></button>
+        <p class="hint">Du sendes til FindForsikring — det tager ca. 2 min</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="pagebody">
-<div class="entry-content clear" itemprop="text"> <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Beregn Bilforsikring - Få et estimat på 30 sekunder</title><meta name="description" content="Brug vores uafhængige beregner til bilforsikring. Få et hurtigt estimat baseret på dine behov og sammenlign markedets dækninger."><style>:root {
-            --primary: #2972C5;
-            --primary-dark: #1e5ba3;
-            --text-main: #1e293b;
-            --text-light: #64748b;
-            --bg-light: #f8fafc;
-            --white: #ffffff;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            background-color: var(--bg-light);
-            color: var(--text-main);
-        }
-
-        .hero-section {
+<div class="wrap">
+<style>
+.calcbox{
+  --primary:#2d8aaa;--primary-dark:#216b87;
+  --text-main:#1e2b3a;--text-light:#5b6b7d;
+  --bg-light:#f6f9fc;--white:#fff;
+  font-family:var(--sans);color:var(--text-main);
+}
+.calcbox .hero-section {
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 90vh;
+            min-height:auto;
             padding: 40px 5%;
             gap: 60px;
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        /* VENSTRE SIDE: TEST & SEO */
-        .hero-content {
+        }.calcbox .hero-content {
             flex: 1;
             max-width: 600px;
-        }
-
-        .hero-content h1 {
+        }.calcbox .hero-content h2 {
             font-size: 3.5rem;
             line-height: 1.1;
             font-weight: 800;
             margin-bottom: 20px;
             color: var(--text-main);
-        }
-
-        .hero-content h1 span {
+        }.calcbox .hero-content h2 span {
             color: var(--primary);
-        }
-
-        .hero-content p {
+        }.calcbox .hero-content p {
             font-size: 1.1rem;
             line-height: 1.6;
             color: var(--text-light);
             margin-bottom: 30px;
-        }
-
-        .trust-list {
+        }.calcbox .trust-list {
             list-style: none;
             padding: 0;
-        }
-
-        .trust-list li {
+        }.calcbox .trust-list li {
             display: flex;
             align-items: center;
             margin-bottom: 12px;
             font-weight: 600;
             font-size: 1rem;
-        }
-
-        .trust-list li::before {
+        }.calcbox .trust-list li::before {
             content: '✓';
             margin-right: 12px;
             color: #10b981;
@@ -244,43 +242,28 @@
             align-items: center;
             justify-content: center;
             border-radius: 50%;
-        }
-
-        /* HØJRE SIDE: BEREGNER */
-        .hero-calculator {
+        }.calcbox .hero-calculator {
             flex: 0 1 450px;
             background: var(--white);
             padding: 35px;
             border-radius: 24px;
             box-shadow: 0 20px 40px rgba(0,0,0,0.08);
             border: 1px solid #e2e8f0;
-        }
-
-        .calc-title {
+        }.calcbox .calc-title {
             font-size: 1.25rem;
             font-weight: 700;
             margin-bottom: 25px;
             text-align: center;
-        }
-
-        .form-group { margin-bottom: 20px; }
-
-        label {
+        }.calcbox .form-group { margin-bottom: 20px; }.calcbox label {
             display: block;
             font-size: 0.9rem;
             font-weight: 600;
             margin-bottom: 8px;
-        }
-
-        .btn-grid {
+        }.calcbox .btn-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 10px;
-        }
-
-        .btn-grid input { display: none; }
-
-        .btn-grid label {
+        }.calcbox .btn-grid input { display: none; }.calcbox .btn-grid label {
             background: #f1f5f9;
             padding: 12px;
             text-align: center;
@@ -289,27 +272,18 @@
             border: 2px solid transparent;
             transition: 0.2s;
             margin: 0;
-        }
-
-        .btn-grid input:checked + label {
+        }.calcbox .btn-grid input:checked + label {
             border-color: var(--primary);
             background: #eff6ff;
             color: var(--primary);
-        }
-
-        .result-box {
+        }.calcbox .result-box {
             background: var(--primary);
             color: white;
             padding: 25px;
             border-radius: 16px;
             text-align: center;
             margin-top: 25px;
-        }
-
-        .result-box .label { font-size: 0.8rem; opacity: 0.9; text-transform: uppercase; }
-        .result-box .price { font-size: 2.5rem; font-weight: 800; margin: 5px 0; }
-
-        .cta-submit {
+        }.calcbox .result-box .label { font-size: 0.8rem; opacity: 0.9; text-transform: uppercase; }.calcbox .result-box .price { font-size: 2.5rem; font-weight: 800; margin: 5px 0; }.calcbox .cta-submit {
             display: block;
             width: 100%;
             background: white;
@@ -320,23 +294,30 @@
             font-weight: 700;
             margin-top: 15px;
             transition: 0.3s;
-        }
-
-        .cta-submit:hover { background: #f8fafc; transform: translateY(-2px); }
+        }.calcbox .cta-submit:hover { background: #f8fafc; transform: translateY(-2px); }
 
         /* MOBIL OPTIMERING */
-        @media (max-width: 968px) {
-            .hero-section {
+        @media (max-width: 968px) {.calcbox .hero-section {
                 flex-direction: column;
                 text-align: center;
                 padding-top: 60px;
-            }
-            .hero-content h1 { font-size: 2.5rem; }
-            .trust-list li { justify-content: center; }
-            .hero-calculator { width: 100%; max-width: 100%; }
-        }</style><section class="hero-section"><article class="hero-content"><h1>Beregn <span>bilforsikring</span> nemt og gennemsigtigt</h1><p> Få et realistisk estimat på din præmie baseret på dine aktuelle behov. 
+            }.calcbox .hero-content h2 { font-size: 2.5rem; }.calcbox .trust-list li { justify-content: center; }.calcbox .hero-calculator { width: 100%; max-width: 100%; }
+        }</style><section class="calcbox hero-section"><article class="hero-content"><h2>Beregn <span>bilforsikring</span> nemt og gennemsigtigt</h2><p> Få et realistisk estimat på din præmie baseret på dine aktuelle behov. 
  Vi hjælper dig med at forstå tallene, så du kan vælge den rette dækning 
- uden skjulte gebyrer eller overraskelser.</p><ul class="trust-list"><li>Uafhængig prissammenligning</li><li>Opdaterede takster for 2026</li><li>Gennemsigtige dækningstyper</li><li>Data behandlet sikkert og fortroligt</li></ul></article><aside class="hero-calculator"><div class="calc-title">Start din beregning her</div><div class="form-group"> <label>Din alder</label><div class="btn-grid"> <input type="radio" name="age" id="age1" value="ung" onchange="calc()"> <label for="age1">18-24 år</label> <input type="radio" name="age" id="age2" value="voksen" checked onchange="calc()"> <label for="age2">25+ år</label></div></div><div class="form-group"> <label>Årlig kørsel</label><div class="btn-grid"> <input type="radio" name="km" id="km1" value="lav" checked onchange="calc()"> <label for="km1"> <input type="radio" name="km" id="km2" value="hoj" onchange="calc()"> <label for="km2">&gt; 15.000 km</label></label></div></div><div class="form-group"> <label>Dækning</label><div class="btn-grid"> <input type="radio" name="type" id="type1" value="ansvar" onchange="calc()"> <label for="type1">Ansvar</label> <input type="radio" name="type" id="type2" value="kasko" checked onchange="calc()"> <label for="type2">Kasko</label></div></div><div class="result-box"><div class="label">Estimeret årlig præmie</div><div class="price" id="display-price">3.250 kr.</div> <a href="#" class="cta-submit">Få præcist tilbud</a></div></aside></section> <script>function calc() {
+ uden skjulte gebyrer eller overraskelser.</p><ul class="trust-list"><li>Uafhængig prissammenligning</li><li>Opdaterede takster for 2026</li><li>Gennemsigtige dækningstyper</li><li>Data behandlet sikkert og fortroligt</li></ul></article><aside class="hero-calculator"><div class="calc-title">Start din beregning her</div><div class="form-group"> <label>Din alder</label><div class="btn-grid"> <input type="radio" name="age" id="age1" value="ung" onchange="calc()"> <label for="age1">18-24 år</label> <input type="radio" name="age" id="age2" value="voksen" checked onchange="calc()"> <label for="age2">25+ år</label></div></div><div class="form-group"> <label>Årlig kørsel</label><div class="btn-grid"> <input type="radio" name="km" id="km1" value="lav" checked onchange="calc()"> <label for="km1"> <input type="radio" name="km" id="km2" value="hoj" onchange="calc()"> <label for="km2">&gt; 15.000 km</label></label></div></div><div class="form-group"> <label>Dækning</label><div class="btn-grid"> <input type="radio" name="type" id="type1" value="ansvar" onchange="calc()"> <label for="type1">Ansvar</label> <input type="radio" name="type" id="type2" value="kasko" checked onchange="calc()"> <label for="type2">Kasko</label></div></div><div class="result-box"><div class="label">Estimeret årlig præmie</div><div class="price" id="display-price">3.250 kr.</div> <a href="#" class="cta-submit">Få præcist tilbud</a></div></aside></section>
+</div>
+
+<div class="wrap art">
+  <article class="art-in">
+    Beregn Bilforsikring - Få et estimat på 30 sekunder <h2>Sådan beregner du din bilforsikring online</h2><p>Det er heldigvis nemt og hurtigt at beregne din bilforsikring. Du behøver ikke selv sidde og sammenligne priser fra 10 forskellige selskaber – det gør vores sammenligningstjeneste for dig.</p><p>Processen er enkel:</p><p><strong>1. Indtast din nummerplade</strong> Når du taster din nummerplade ind, henter vi automatisk oplysningerne om din bil fra Motorregisteret. Du slipper for at finde stelnummer, motorstørrelse og bilens alder frem.</p><p><strong>2. Oplyse personlige informationer</strong> Du skal angive grundlæggende oplysninger som alder, postnummer, antal kørte kilometer og ønsket dækning. Jo mere præcist du udfylder, desto mere retvisende bliver beregningen.</p><p><strong>3. Sammenlign tilbud</strong> På baggrund af dine oplysninger genereres et overblik over relevante tilbud fra forsikringsselskaber i vores netværk. Du kan sammenligne pris, dækning og <a href="/selvrisiko-paa-bilforsikring/">selvrisiko</a> side om side.</p><p><strong>4. Vælg og opret</strong> Finder du et tilbud, der matcher dine behov, kan du gå videre og oprette din forsikring direkte. I mange tilfælde sørger det nye selskab selv for at opsige din eksisterende forsikring.</p><p>Det tager under to minutter at gennemføre beregningen, og det er gratis og uforpligtende.</p><h2>Hvad koster bilforsikring i gennemsnit (2026)?</h2><p> Prisen afhænger af en lang række individuelle faktorer. Her er de generelle markedspriser i 2026, som kan hjælpe dig med at danne et realistisk billede:</p><table><thead><tr><th>Profil</th><th>Ansvar (årspris)</th><th>Kasko (årspris)</th></tr></thead><tbody><tr><td>Ung bilist (18-25 år)</td><td>6.250 – 12.500 kr.</td><td>10.500 – 21.000 kr.</td></tr><tr><td>Voksen (30-55 år)</td><td>2.600 – 5.200 kr.</td><td>4.200 – 9.400 kr.</td></tr><tr><td>Senior (60+ år)</td><td>2.600 – 4.700 kr.</td><td>4.200 – 8.300 kr.</td></tr><tr><td>Ny bil (</td><td>3.650 – 7.300 kr.</td><td>6.250 – 14.500 kr.</td></tr><tr><td>Ældre bil (&gt; 10 år)</td><td>2.100 – 4.200 kr.</td><td>3.100 – 6.250 kr.</td></tr></tbody></table><p><em>*Tallene er vejledende og baseret på typiske markedspriser i 2026. Den faktiske pris beregnes altid individuelt.</em></p><p><strong>Spar penge:</strong> Mange danskere betaler mere end nødvendigt, fordi de aldrig tjekker markedet. Det betale sig at sammenligne tilbud aktivt, da prisforskellen ofte er over 3.000 kr. om året for den samme dækning.</p><h2>Hvad får du ikke oplyst, når du beregner bilforsikring online?</h2><p>En online beregner er et fremragende udgangspunkt – men det er vigtigt at være klar over, hvad der ikke fremgår af et beregnet tilbud:</p><p><strong>Specifikke undtagelser og begrænsninger</strong> Mange bilforsikringer indeholder klausuler, der begrænser dækningen i visse situationer – fx hvis bilen bruges erhvervsmæssigt, eller hvis skaden sker under bestemte omstændigheder. Disse fremgår af den fulde police og ikke altid af beregningsoversigten.</p><p><strong>Betingelser for bonusbevarelse</strong> Hvornår og hvordan du bevarer din bonusrabat ved en skade varierer fra selskab til selskab. Tjek dette separat, inden du vælger.</p><p><strong>Serviceniveau og skadesbehandling</strong> Prisen siger ikke alt om, hvor let det er at anmelde en skade, hvor hurtigt den behandles, og om selskabet har en god lokal skadesservice. Det kan være værd at læse anmeldelser og vurdere selskabets generelle omdømme.</p><h2>Kan du betale din bilforsikring månedligt?</h2><p>Ja – langt de fleste <a href="/forsikringsselskaber/">forsikringsselskaber</a> tilbyder mulighed for at betale din bilforsikring månedligt frem for én gang om året. Det giver bedre likviditet i hverdagen og gør det nemmere at holde styr på dine udgifter.</p><p>Vær dog opmærksom på, at <a href="/maanedlig-betaling/">månedlig betaling</a> i nogle tilfælde er en smule dyrere end årsvis betaling, da selskaberne lægger et gebyr eller en lidt højere pris på ved ratebetaling. Det er altid en god idé at sammenligne begge betalingsmodeller, inden du beslutter dig</p><h2>Hvad koster bilforsikring – og hvad bestemmer prisen?</h2><p>Inden du beregner din <a href="/">bilforsikring</a>, er det en god idé at forstå, hvilke faktorer der reelt afgør, hvad du kommer til at betale. Prisen er nemlig langt fra tilfældig – den er et resultat af en konkret risikovurdering, som varierer fra selskab til selskab.</p><p>Herunder gennemgår vi de vigtigste parametre, som forsikringsselskaberne vægter, når de udregner din pris.</p><h3>Din alder og din kørselshistorik</h3><p>Alder er en af de faktorer, der har størst betydning for prisen. Statistisk set er yngre bilister involveret i flere uheld, og det afspejler sig direkte i præmien. Er du <a href="/17-aarige/">ny bilist </a>eller <a href="/unge/">under 25 år</a>, bør du forvente en højere pris end en <a href="/elitebilist/">erfaren bilist</a> med mange skadefri år bag sig. </p><p>Har du kørt skadefrit i mange år, belønner mange selskaber dig med en bonusrabat, som kan reducere din pris ganske markant over tid.</p><h3>Bilens mærke, alder og motorstørrelse</h3><p>Jo nyere og dyrere din bil er, desto mere koster det at forsikre den – som udgangspunkt. Det hænger sammen med, at reparationsomkostningerne er højere, og at bilen har en større markedsværdi, der skal dækkes ved totalskade eller tyveri.</p><p>Motorstørrelse og effekt spiller også ind. En bil med høj hestekraft vurderes som en højere forsikringsrisiko end en mere afdæmpet familiebil. Omvendt kan moderne sikkerhedssystemer som automatisk nødopbremsning og vognbaneassistance trække i den rigtige retning.</p><h3>Hvilken dækning du vælger</h3><p>Valget af dækning er måske den mest åbenlyse prisfaktor – og den, du selv har mest kontrol over. Der er grundlæggende forskel på, hvad du betaler, alt efter om du vælger:</p><ul><li><strong><a href="/ansvarsforsikring/">Ansvarsforsikring</a>:</strong> Den lovpligtige minimumsløsning, der dækker skader du påfører andre – men ikke din egen bil.</li><li><strong><a href="/ordbog/delkasko/">Delkasko</a>:</strong> Dækker typisk brand, tyveri, glasskader og vejrlig, men ikke kollisionsskader.</li><li><strong><a href="/kaskoforsikring/">Kaskoforsikring</a>:</strong> Den mest dækkende løsning, som også dækker skader på din egen bil – uanset hvem der er skyld i uheldet.</li></ul><p>Vælger du fuld kaskodækning frem for kun ansvarsforsikring, vil prisen typisk stige markant, men til gengæld er du langt bedre stillet ved en skade. &lt;!– INTERN LINK: /kaskoforsikring/ –&gt;</p><h3>Din selvrisiko</h3><p>Selvrisiko er det beløb, du selv betaler ved en skade, inden forsikringen træder til. Jo højere selvrisiko du accepterer, desto lavere månedlig præmie vil du typisk få. Det kan give god mening, hvis du er en forsigtig bilist – men vær realistisk om, hvad du har råd til at betale, hvis uheldet er ude.</p><h3>Postnummer og geografisk placering</h3><p>Det kan virke underligt, men din bopæl har faktisk betydning for, hvad du betaler. Forsikringsselskaberne bruger historiske skadesdata til at vurdere risikoen i forskellige områder. Bor du i et område med mange indbrud, trafikuheld eller høj befolkningstæthed, kan det give en lidt højere pris end i mere landlige egne.</p><h3>Antal kørte kilometer</h3><p>Bruger du bilen dagligt til pendling eller kører du mange kilometer om året, stiger risikoen for at blive involveret i et uheld – og det ved forsikringsselskaberne godt. Kører du under 15.000 km om året, kan det i mange tilfælde give en lavere præmie end en bilist, der kører 30.000+ km.</p><h2>Ofte stillede spørgsmål om at beregne bilforsikring</h2><h3>Hvad skal jeg bruge, når jeg beregner bilforsikring?</h3><p>Du skal som minimum bruge din nummerplade eller oplysninger om bilen (mærke, model, årgang), dit postnummer, din alder og et estimat over, hvor mange kilometer du kører om året. Har du allerede en forsikring, er det også nyttigt at have din nuværende police ved hånden til sammenligning.</p><h3>Er en online beregning af bilforsikring bindende?</h3><p>Nej. En beregning er udelukkende vejledende. Du forpligter dig ikke til noget ved at beregne din pris – hverken over for os eller de forsikringsselskaber, hvis tilbud du ser.</p><h3>Kan jeg beregne bilforsikring, selvom jeg ikke har bil endnu?</h3><p>Ja, i de fleste tilfælde. Du kan typisk beregne en pris baseret på en konkret bilmodel, selvom du endnu ikke har erhvervet bilen. Det kan give dig et godt billede af, hvad forsikringen kommer til at koste, inden du underskriver hos forhandleren.</p><h3>Hvad er forskellen på at beregne og at indhente et tilbud?</h3><p>En beregning giver dig en estimeret pris baseret på de oplysninger, du indtaster. Et konkret tilbud er en bindende pris fra et forsikringsselskab, som typisk kræver, at du oplyser din fulde profil og accepterer selskabets vilkår. Beregningen er altid første skridt.</p><h3>Hvornår er det bedste tidspunkt at beregne bilforsikring?</h3><p>Du kan beregne din bilforsikring når som helst – men det giver særlig god mening i forbindelse med bilkøb, ved årets udgang (når mange forsikringer fornyes), eller når du er begyndt at tvivle på, om du betaler en rimelig pris.</p>
+    <nav class="art-rel" aria-label="Relaterede artikler">
+      <h2>Læs også</h2>
+      <ul><li><a href="/hvad-koster-bilforsikring-gennemsnit/">Hvad koster bilforsikring i gennemsnit?</a></li><li><a href="/selvrisiko-paa-bilforsikring/">Sådan vælger du selvrisiko</a></li><li><a href="/bonusklasse/">Bonusklasser og skadefri år</a></li><li><a href="/billigste/">Danmarks billigste bilforsikring</a></li></ul>
+    </nav>
+    <p class="art-src">Artiklen er skrevet af <a href="/emil-clausen/">Emil Rostgaard Clausen</a> og bygger på offentligt tilgængelige kilder fra Forsikring &amp; Pension, Forbrugerrådet Tænk og selskabernes egne prislister. Siden indeholder kommercielle sammenligningslinks — <a href="/redaktionel-metode/">se vores redaktionelle metode</a>.</p>
+  </article>
+</div>
+<script>function calc() {
         let price = 3000;
         const age = document.querySelector('input[name="age"]:checked').value;
         const km = document.querySelector('input[name="km"]:checked').value;
@@ -348,291 +329,7 @@
 
         document.getElementById('display-price').innerText = price.toLocaleString('da-DK') + ' kr.';
     }
-    calc(); // Init</script> </div></div></div></div><style>/* Selve bjælken - Nul luft top/bund */
-.toc-wrapper {
-  width: 100%;
-  background: #ffffff;
-  border-top: 1px solid #e2e8f0;
-  border-bottom: 2px solid #f1f5f9;
-  padding: 0;
-  margin: 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.toc-container {
-  max-width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px; /* Mere kompakt højde */
-}
-
-/* De enkelte links */
-.toc-item {
-  color: #475569;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 600;
-  padding: 0 12px; 
-  height: 100%;
-  display: flex;
-  align-items: center;
-  transition: all 0.2s ease;
-  position: relative;
-  white-space: nowrap;
-}
-
-/* Hover effekt med den blå Porsche/Taxa-farve */
-.toc-item:hover {
-  color: #2563eb;
-  background: #f8fafc;
-}
-
-.toc-item:hover::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: #2563eb;
-}
-
-/* Skillelinjer */
-.toc-divider {
-  width: 1px;
-  height: 18px;
-  background: #e2e8f0;
-  flex-shrink: 0;
-}
-
-/* Mobil-optimering: Gør bjælken scrollbar sidelæns */
-@media (max-width: 850px) {
-  .toc-container {
-    justify-content: flex-start;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    padding: 0 5px;
-  }
-  .toc-divider {
-    display: none; /* Skaber mere plads på små skærme */
-  }
-  .toc-item {
-    padding: 0 15px;
-    font-size: 14px;
-  }
-}</style></div></div></div></div><div class="elementor-menu-anchor" id="1"></div></div></div><h2 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">Sådan beregner du din bilforsikring online</h2><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Det er heldigvis nemt og hurtigt at beregne din bilforsikring. Du behøver ikke selv sidde og sammenligne priser fra 10 forskellige selskaber – det gør vores sammenligningstjeneste for dig.</p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Processen er enkel:</p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>1. Indtast din nummerplade</strong> Når du taster din nummerplade ind, henter vi automatisk oplysningerne om din bil fra Motorregisteret. Du slipper for at finde stelnummer, motorstørrelse og bilens alder frem.</p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>2. Oplyse personlige informationer</strong> Du skal angive grundlæggende oplysninger som alder, postnummer, antal kørte kilometer og ønsket dækning. Jo mere præcist du udfylder, desto mere retvisende bliver beregningen.</p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>3. Sammenlign tilbud</strong> På baggrund af dine oplysninger genereres et overblik over relevante tilbud fra forsikringsselskaber i vores netværk. Du kan sammenligne pris, dækning og selvrisiko side om side.</p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>4. Vælg og opret</strong> Finder du et tilbud, der matcher dine behov, kan du gå videre og oprette din forsikring direkte. I mange tilfælde sørger det nye selskab selv for at opsige din eksisterende forsikring.</p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Det tager under to minutter at gennemføre beregningen, og det er gratis og uforpligtende.</p></div></div></div></div><div class="elementor-menu-anchor" id="2"></div></div></div><div class="avg-price-section"><h2>Hvad koster bilforsikring i gennemsnit (2026)?</h2><p class="avg-intro"> Prisen afhænger af en lang række individuelle faktorer. Her er de generelle markedspriser i 2026, som kan hjælpe dig med at danne et realistisk billede:</p><div class="vs-table-wrapper"><table class="vs-table"><thead><tr><th>Profil</th><th>Ansvar (årspris)</th><th>Kasko (årspris)</th></tr></thead><tbody><tr><td data-label="Profil" class="vs-model">Ung bilist (18-25 år)</td><td data-label="Ansvar">6.250 – 12.500 kr.</td><td data-label="Kasko" class="vs-price">10.500 – 21.000 kr.</td></tr><tr><td data-label="Profil" class="vs-model">Voksen (30-55 år)</td><td data-label="Ansvar">2.600 – 5.200 kr.</td><td data-label="Kasko" class="vs-price">4.200 – 9.400 kr.</td></tr><tr><td data-label="Profil" class="vs-model">Senior (60+ år)</td><td data-label="Ansvar">2.600 – 4.700 kr.</td><td data-label="Kasko" class="vs-price">4.200 – 8.300 kr.</td></tr><tr><td data-label="Profil" class="vs-model">Ny bil (</td><td data-label="Ansvar">3.650 – 7.300 kr.</td><td data-label="Kasko" class="vs-price">6.250 – 14.500 kr.</td></tr><tr><td data-label="Profil" class="vs-model">Ældre bil (&gt; 10 år)</td><td data-label="Ansvar">2.100 – 4.200 kr.</td><td data-label="Kasko" class="vs-price">3.100 – 6.250 kr.</td></tr></tbody></table></div><p class="avg-disclaimer"> <em>*Tallene er vejledende og baseret på typiske markedspriser i 2026. Den faktiske pris beregnes altid individuelt.</em></p><div class="vs-analysis"><p> <strong>Spar penge:</strong> Mange danskere betaler mere end nødvendigt, fordi de aldrig tjekker markedet. Det betale sig at sammenligne tilbud aktivt, da prisforskellen ofte er over 3.000 kr. om året for den samme dækning.</p></div></div><style>.avg-price-section {
-    font-family: system-ui, -apple-system, sans-serif;
-    color: #1e293b;
-    margin: 0;
-    padding: 10px 0;
-  }
-
-  .avg-intro {
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #4b5563;
-  }
-
-  .avg-disclaimer {
-    font-size: 12px;
-    color: #64748b;
-    margin-top: 12px;
-  }
-
-  .vs-table-wrapper {
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    overflow: hidden;
-    background: #ffffff;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  }
-
-  .vs-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-  }
-
-  .vs-table th {
-    background: #f8fafc;
-    color: #475569;
-    text-align: left;
-    padding: 14px;
-    border-bottom: 2px solid #e2e8f0;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .vs-table td {
-    padding: 14px;
-    border-bottom: 1px solid #f1f5f9;
-  }
-
-  .vs-model {
-    font-weight: 700;
-    color: #111827;
-  }
-
-  .vs-price {
-    font-weight: 700;
-    color: #2563eb;
-  }
-
-  .vs-analysis {
-    margin-top: 20px;
-    padding: 18px;
-    background: #f8fafc;
-    border-radius: 10px;
-    border-left: 4px solid #2563eb;
-    font-size: 14px;
-    line-height: 1.6;
-    color: #4b5563;
-  }
-
-  /* Mobil-optimering (Stacking) */
-  @media screen and (max-width: 600px) {
-    .vs-table thead { display: none; }
-    .vs-table tr {
-      display: block;
-      border-bottom: 4px solid #f1f5f9;
-    }
-    .vs-table td {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 16px;
-      border: none;
-    }
-    .vs-table td::before {
-      content: attr(data-label);
-      font-weight: 700;
-      color: #94a3b8;
-      font-size: 11px;
-      text-transform: uppercase;
-    }
-    .vs-model {
-      background: #f8fafc;
-      justify-content: center !important;
-    }
-    .vs-model::before { display: none; }
-  }</style></div></div></div></div> </div></div></div></div><div class="elementor-menu-anchor" id="3"></div></div></div><h2 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">Hvad får du ikke oplyst, når du beregner bilforsikring online?</h2><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">En online beregner er et fremragende udgangspunkt – men det er vigtigt at være klar over, hvad der ikke fremgår af et beregnet tilbud:</p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Specifikke undtagelser og begrænsninger</strong> Mange bilforsikringer indeholder klausuler, der begrænser dækningen i visse situationer – fx hvis bilen bruges erhvervsmæssigt, eller hvis skaden sker under bestemte omstændigheder. Disse fremgår af den fulde police og ikke altid af beregningsoversigten.</p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Betingelser for bonusbevarelse</strong> Hvornår og hvordan du bevarer din bonusrabat ved en skade varierer fra selskab til selskab. Tjek dette separat, inden du vælger.</p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Serviceniveau og skadesbehandling</strong> Prisen siger ikke alt om, hvor let det er at anmelde en skade, hvor hurtigt den behandles, og om selskabet har en god lokal skadesservice. Det kan være værd at læse anmeldelser og vurdere selskabets generelle omdømme.</p></div></div></div></div><div class="elementor-menu-anchor" id="4"></div></div></div><h2 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">Kan du betale din bilforsikring månedligt?</h2><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Ja – langt de fleste <a href="/forsikringsselskaber/">forsikringsselskaber</a> tilbyder mulighed for at betale din bilforsikring månedligt frem for én gang om året. Det giver bedre likviditet i hverdagen og gør det nemmere at holde styr på dine udgifter.</p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Vær dog opmærksom på, at <a href="/maanedlig-betaling/">månedlig betaling</a> i nogle tilfælde er en smule dyrere end årsvis betaling, da selskaberne lægger et gebyr eller en lidt højere pris på ved ratebetaling. Det er altid en god idé at sammenligne begge betalingsmodeller, inden du beslutter dig</p></div></div></div></div><div class="elementor-menu-anchor" id="5"></div></div></div><h2 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">Hvad koster bilforsikring – og hvad bestemmer prisen?</h2><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Inden du beregner din <a href="/">bilforsikring</a>, er det en god idé at forstå, hvilke faktorer der reelt afgør, hvad du kommer til at betale. Prisen er nemlig langt fra tilfældig – den er et resultat af en konkret risikovurdering, som varierer fra selskab til selskab.</p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Herunder gennemgår vi de vigtigste parametre, som forsikringsselskaberne vægter, når de udregner din pris.</p><h3 class="text-text-100 mt-2 -mb-1 text-base font-bold">Din alder og din kørselshistorik</h3><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Alder er en af de faktorer, der har størst betydning for prisen. Statistisk set er yngre bilister involveret i flere uheld, og det afspejler sig direkte i præmien. Er du <a href="/17-aarige/">ny bilist </a>eller <a href="/unge/">under 25 år</a>, bør du forvente en højere pris end en <a href="/elitebilist/" style="">erfaren bilist</a> med mange skadefri år bag sig. </p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Har du kørt skadefrit i mange år, belønner mange selskaber dig med en bonusrabat, som kan reducere din pris ganske markant over tid.</p><h3 class="text-text-100 mt-2 -mb-1 text-base font-bold">Bilens mærke, alder og motorstørrelse</h3><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Jo nyere og dyrere din bil er, desto mere koster det at forsikre den – som udgangspunkt. Det hænger sammen med, at reparationsomkostningerne er højere, og at bilen har en større markedsværdi, der skal dækkes ved totalskade eller tyveri.</p><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Motorstørrelse og effekt spiller også ind. En bil med høj hestekraft vurderes som en højere forsikringsrisiko end en mere afdæmpet familiebil. Omvendt kan moderne sikkerhedssystemer som automatisk nødopbremsning og vognbaneassistance trække i den rigtige retning.</p><h3 class="text-text-100 mt-2 -mb-1 text-base font-bold">Hvilken dækning du vælger</h3><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Valget af dækning er måske den mest åbenlyse prisfaktor – og den, du selv har mest kontrol over. Der er grundlæggende forskel på, hvad du betaler, alt efter om du vælger:</p><ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3"><li class="whitespace-normal break-words pl-2"><strong><a href="/ansvarsforsikring/">Ansvarsforsikring</a>:</strong> Den lovpligtige minimumsløsning, der dækker skader du påfører andre – men ikke din egen bil.</li><li class="whitespace-normal break-words pl-2"><strong><a href="/ordbog/delkasko/">Delkasko</a>:</strong> Dækker typisk brand, tyveri, glasskader og vejrlig, men ikke kollisionsskader.</li><li class="whitespace-normal break-words pl-2"><strong><a href="/kaskoforsikring/">Kaskoforsikring</a>:</strong> Den mest dækkende løsning, som også dækker skader på din egen bil – uanset hvem der er skyld i uheldet.</li></ul><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Vælger du fuld kaskodækning frem for kun ansvarsforsikring, vil prisen typisk stige markant, men til gengæld er du langt bedre stillet ved en skade. &lt;!– INTERN LINK: /kaskoforsikring/ –&gt;</p><h3 class="text-text-100 mt-2 -mb-1 text-base font-bold">Din selvrisiko</h3><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Selvrisiko er det beløb, du selv betaler ved en skade, inden forsikringen træder til. Jo højere selvrisiko du accepterer, desto lavere månedlig præmie vil du typisk få. Det kan give god mening, hvis du er en forsigtig bilist – men vær realistisk om, hvad du har råd til at betale, hvis uheldet er ude.</p><h3 class="text-text-100 mt-2 -mb-1 text-base font-bold">Postnummer og geografisk placering</h3><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Det kan virke underligt, men din bopæl har faktisk betydning for, hvad du betaler. Forsikringsselskaberne bruger historiske skadesdata til at vurdere risikoen i forskellige områder. Bor du i et område med mange indbrud, trafikuheld eller høj befolkningstæthed, kan det give en lidt højere pris end i mere landlige egne.</p><h3 class="text-text-100 mt-2 -mb-1 text-base font-bold">Antal kørte kilometer</h3><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Bruger du bilen dagligt til pendling eller kører du mange kilometer om året, stiger risikoen for at blive involveret i et uheld – og det ved forsikringsselskaberne godt. Kører du under 15.000 km om året, kan det i mange tilfælde give en lavere præmie end en bilist, der kører 30.000+ km.</p></div></div></div></div><div class="elementor-menu-anchor" id="6"></div></div></div><h2 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">Ofte stillede spørgsmål om at beregne bilforsikring</h2><h3 class="text-text-100 mt-2 -mb-1 text-base font-bold">Hvad skal jeg bruge, når jeg beregner bilforsikring?</h3><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Du skal som minimum bruge din nummerplade eller oplysninger om bilen (mærke, model, årgang), dit postnummer, din alder og et estimat over, hvor mange kilometer du kører om året. Har du allerede en forsikring, er det også nyttigt at have din nuværende police ved hånden til sammenligning.</p><h3 class="text-text-100 mt-2 -mb-1 text-base font-bold">Er en online beregning af bilforsikring bindende?</h3><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Nej. En beregning er udelukkende vejledende. Du forpligter dig ikke til noget ved at beregne din pris – hverken over for os eller de forsikringsselskaber, hvis tilbud du ser.</p><h3 class="text-text-100 mt-2 -mb-1 text-base font-bold">Kan jeg beregne bilforsikring, selvom jeg ikke har bil endnu?</h3><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Ja, i de fleste tilfælde. Du kan typisk beregne en pris baseret på en konkret bilmodel, selvom du endnu ikke har erhvervet bilen. Det kan give dig et godt billede af, hvad forsikringen kommer til at koste, inden du underskriver hos forhandleren.</p><h3 class="text-text-100 mt-2 -mb-1 text-base font-bold">Hvad er forskellen på at beregne og at indhente et tilbud?</h3><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">En beregning giver dig en estimeret pris baseret på de oplysninger, du indtaster. Et konkret tilbud er en bindende pris fra et forsikringsselskab, som typisk kræver, at du oplyser din fulde profil og accepterer selskabets vilkår. Beregningen er altid første skridt.</p><h3 class="text-text-100 mt-2 -mb-1 text-base font-bold">Hvornår er det bedste tidspunkt at beregne bilforsikring?</h3><p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Du kan beregne din bilforsikring når som helst – men det giver særlig god mening i forbindelse med bilkøb, ved årets udgang (når mange forsikringer fornyes), eller når du er begyndt at tvivle på, om du betaler en rimelig pris.</p></div></div></div></div><section class="author-profile-nu" aria-labelledby="author-heading"><div class="author-container"><div class="author-image-area"> </div><div class="author-info"> <span class="author-label">Ansvarshavende redaktør</span><h2 id="author-heading" class="author-name">Emil Rostgaard Clausen</h2><p class="author-bio"> Emil er specialist i det danske forsikringsmarked med fokus på at gøre komplekse policer forståelige for alle bilejere. Med flere års erfaring inden for digital prissammenligning sikrer han, at alt indhold på <strong>bilforsikringer.nu</strong> er opdateret, uvildigt og baseret på de nyeste markedstendenser i 2026.</p><div class="author-meta"><div class="meta-item"> <span class="icon">✓</span> <span>Ekspert i bilforsikring &amp; dækning</span></div><div class="meta-item"> <span class="icon">✓</span> <span>Faktatjekket og verificeret indhold</span></div></div><div class="author-social"> <a href="https://www.linkedin.com/in/emil-rostgaard-702809195/" target="_blank" rel="nofollow noopener noreferrer" class="linkedin-link"> <svg viewbox="0 0 24 24" class="social-icon"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg> LinkedIn </a></div></div></div></section><style>.author-profile-nu {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 0 35px; /* Nul padding i top/bund */
-  margin: 20px 0;
-  font-family: system-ui, -apple-system, sans-serif;
-  overflow: hidden;
-}
-
-.author-container {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-}
-
-.author-image-area {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  padding: 20px 0; /* Minimal padding for at billedet ikke rører kanten direkte */
-}
-
-.author-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #f3f4f6;
-  display: block;
-}
-
-.author-info {
-  /* Fjerner default margener der skaber luft */
-  padding: 20px 0;
-}
-
-.author-label {
-  display: inline-block;
-  background: #eff6ff;
-  color: #2563eb;
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  padding: 3px 10px;
-  border-radius: 20px;
-  margin: 0 0 10px 0; /* Kun margin i bunden */
-}
-
-.author-name {
-  font-size: 22px;
-  color: #111827;
-  margin: 0 0 10px 0; /* Nulstillet top-margin */
-  font-weight: 800;
-  line-height: 1;
-}
-
-.author-bio {
-  font-size: 15px;
-  color: #4b5563;
-  line-height: 1.5;
-  margin: 0 0 15px 0;
-}
-
-.author-meta {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
-}
-
-.meta-item {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 13px;
-  color: #374151;
-  font-weight: 600;
-}
-
-.meta-item .icon {
-  color: #10b981;
-}
-
-.author-social {
-  display: flex;
-  margin: 0;
-}
-
-.linkedin-link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  color: #0077b5;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 14px;
-}
-
-.social-icon {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
-
-/* Mobil-fix */
-@media (max-width: 650px) {
-  .author-profile-nu { padding: 20px; }
-  .author-container { flex-direction: column; text-align: center; gap: 15px; }
-  .author-info, .author-image-area { padding: 0; }
-  .author-meta { flex-direction: column; gap: 5px; align-items: center; }
-  .author-social { justify-content: center; }
-}</style></div></div></div></div> <script type="application/ld+json">{
+    calc(); // Init</script><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -677,8 +374,7 @@
       }
     }
   ]
-}</script> </div></div></div></div></div></div>
-</div>
+}</script>
 
 <div class="wrap">
   <div class="cta teal rv">
@@ -757,6 +453,6 @@
     <button type="button" class="btn" data-go="stickyPlate">Sammenlign <span class="arw" aria-hidden="true">→</span></button>
   </div>
 </div>
-<script src="/assets/v2.js?v=20260809c" defer></script>
+<script src="/assets/v2.js?v=20260809d" defer></script>
 </body>
 </html>

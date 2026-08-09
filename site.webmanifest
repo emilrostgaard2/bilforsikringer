@@ -1,0 +1,15 @@
+{
+  "name": "Bilforsikringer.nu",
+  "short_name": "Bilforsikringer",
+  "description": "Uafhængig sammenligning af bilforsikring i Danmark.",
+  "lang": "da",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f6f9fc",
+  "theme_color": "#1e2b3a",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

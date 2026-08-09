@@ -54,6 +54,18 @@
     });
   });
 
+  /* ── CTA i menubjælken: tag nummerpladen med hvis den er udfyldt ── */
+  $$('[data-cta]').forEach(function (el) {
+    el.addEventListener('click', function (e) {
+      var filled = null;
+      $$('[data-plate]').some(function (inp) {
+        if (plateValue(inp).length >= 7) { filled = plateValue(inp); return true; }
+        return false;
+      });
+      if (filled) { e.preventDefault(); go(filled); }
+    });
+  });
+
   /* ── Navigation: burger + dropdowns på touch ── */
   /* MENU-LÅS */
   var burger = $('.burger'), nav = $('.nav'), scrollY = 0;
@@ -164,7 +176,9 @@
       $$('.bar-fill', en.target).forEach(function (bar, i) {
         var w = bar.dataset.w;
         if (w.indexOf('%') < 0) { w += '%'; }
-        setTimeout(function () { bar.style.width = w; }, 90 * i);
+        setTimeout(function () {
+          requestAnimationFrame(function () { bar.style.width = w; });
+        }, 90 * i);
       });
       io.unobserve(en.target);
     });
@@ -182,11 +196,12 @@
   });
 
   /* ── Klæbende CTA: vises når hero'ens plade er ude af syne ── */
-  var sticky = $('.sticky'), heroCard = $('#heroCard');
-  if (sticky && heroCard && 'IntersectionObserver' in window) {
+  var sticky = $('.sticky');
+  var anchor = $('#heroCard') || $('#pagePlate') || $('.plate');
+  if (sticky && anchor && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (e) {
       sticky.classList.toggle('show', !e[0].isIntersecting);
-    }, { threshold: 0 }).observe(heroCard);
+    }, { threshold: 0 }).observe(anchor);
   }
 
   /* ── Video: iframe loades først ved klik ── */

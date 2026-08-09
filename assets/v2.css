@@ -843,3 +843,10 @@ main{margin-top:0}
 main > *:first-child{margin-top:0}
 .bfl > .sec:first-child,.bfl > section:first-child{padding-top:0}
 .bfn-hero,.bfl .bfn-hero{margin-top:0!important}
+
+/* ── Logo-containere i sammenligningskort ────────────────────────────
+   Fast minimumshøjde, så kortet ikke hopper når logoet er hentet. */
+.ic-logo,.kg-logo,.bfnc-logo{min-height:44px}
+.ic-logo img,.kg-logo img,.bfnc-logo img{
+  max-width:100px;max-height:44px;width:auto;height:auto;object-fit:contain;
+}

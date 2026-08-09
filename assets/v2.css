@@ -803,3 +803,32 @@ h1 .g{color:var(--green);white-space:nowrap}
 .bfl .cta-btn,.bfl .cta-card .cta-btn,.mid-cta-inner .cta-btn{width:100%!important;display:flex!important}
 .bfl .cta-card,.bfl .mid-cta-inner{max-width:none}
 @media(min-width:700px){.bfl .cta-card{max-width:520px;margin-inline:auto}}
+
+/* ── Indhold uden egen wrapper (Elementor-skabelonsider m.fl.) ──
+   Kun direkte børn styles, så selvstændige sektioner som .bfl,
+   .bfnc og <section> beholder deres egen fuldbredde-opsætning. */
+.pagebody{overflow-x:hidden}
+.pagebody > h1,.pagebody > h2,.pagebody > h3,.pagebody > h4,
+.pagebody > p,.pagebody > ul,.pagebody > ol,.pagebody > blockquote,
+.pagebody > .tbl,.pagebody > table,.pagebody > figure,.pagebody > div:not([class]){
+  max-width:var(--read);
+  margin-left:auto;margin-right:auto;
+  padding-left:clamp(18px,4vw,24px);padding-right:clamp(18px,4vw,24px);
+}
+.pagebody > h2{margin-top:1.9em}
+.pagebody > h3{margin-top:1.5em}
+.pagebody > table{
+  max-width:min(100%,var(--wrap));border-collapse:collapse;
+  margin-block:1.6em;font-size:.92rem;
+}
+.pagebody > table th{background:var(--navy);color:#fff;padding:11px 14px;text-align:left;font-weight:700}
+.pagebody > table td{padding:11px 14px;border-bottom:1px solid var(--line)}
+.pagebody > table tr:nth-child(even) td{background:var(--wash)}
+.pagebody > *:first-child{margin-top:1.6em}
+.pagebody > *:last-child{margin-bottom:2.4em}
+
+/* rester af fremmede utility-klasser må ikke styre layout */
+.pagebody .break-words{word-break:normal}
+.pagebody .text-right{text-align:inherit}
+.pagebody .border-b-0{border-bottom:0}
+.pagebody a.block{display:inline}

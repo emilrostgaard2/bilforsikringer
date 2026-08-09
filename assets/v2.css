@@ -824,7 +824,7 @@ h1 .g{color:var(--green);white-space:nowrap}
 .pagebody > table th{background:var(--navy);color:#fff;padding:11px 14px;text-align:left;font-weight:700}
 .pagebody > table td{padding:11px 14px;border-bottom:1px solid var(--line)}
 .pagebody > table tr:nth-child(even) td{background:var(--wash)}
-.pagebody > *:first-child{margin-top:1.6em}
+.pagebody > *:first-child{margin-top:0}
 .pagebody > *:last-child{margin-bottom:2.4em}
 
 /* rester af fremmede utility-klasser må ikke styre layout */
@@ -832,3 +832,14 @@ h1 .g{color:var(--green);white-space:nowrap}
 .pagebody .text-right{text-align:inherit}
 .pagebody .border-b-0{border-bottom:0}
 .pagebody a.block{display:inline}
+
+/* hero skal ligge helt op ad menubaren — ingen hvid stribe */
+main > .hubhero:first-child,
+.pagebody > *:first-child,
+.pagebody > .entry-content:first-child > *:first-child{margin-top:0!important}
+.pagebody{padding-top:0}
+.pagebody > .entry-content{margin-top:0}
+main{margin-top:0}
+main > *:first-child{margin-top:0}
+.bfl > .sec:first-child,.bfl > section:first-child{padding-top:0}
+.bfn-hero,.bfl .bfn-hero{margin-top:0!important}

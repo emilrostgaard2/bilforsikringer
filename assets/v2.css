@@ -863,3 +863,50 @@ main > *:first-child{margin-top:0}
 .ic-logo img,.kg-logo img,.bfnc-logo img{
   max-width:100px;max-height:44px;width:auto;height:auto;object-fit:contain;
 }
+
+/* ══ ARTIKEL ════════════════════════════════════════════════════════
+   Fælles komponent til de lange guides. Erstatter inline-styles, så
+   markuppen bliver let og stilen kan rettes ét sted. */
+.art{max-width:none}
+.art-in{max-width:780px;margin-inline:auto;padding-block:clamp(26px,4vw,44px)}
+.art-fig{margin:0 0 26px;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh-2)}
+.art-fig img{display:block;width:100%;height:auto;aspect-ratio:1200/750;object-fit:cover;background:var(--wash)}
+.art-in > p{color:var(--ink-2);line-height:1.72;margin:0 0 15px}
+.art-in > p:first-of-type{font-size:1.06rem;color:var(--ink)}
+.art-in h2{
+  font-size:clamp(1.28rem,1.1rem+.7vw,1.62rem);font-weight:800;color:var(--ink);
+  letter-spacing:-.024em;line-height:1.22;margin:36px 0 12px;
+}
+.art-in h3{font-size:1.06rem;font-weight:700;color:var(--ink);margin:26px 0 8px}
+.art-in h4{font-size:.96rem;font-weight:700;color:var(--ink);margin:18px 0 6px}
+.art-in ul,.art-in ol{color:var(--ink-2);line-height:1.7;padding-left:22px;margin:0 0 15px}
+.art-in li{margin-bottom:7px}
+.art-in li::marker{color:var(--teal)}
+.art-in a{color:var(--teal-ink);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.art-in a:hover{color:var(--teal-deep)}
+.art-in strong{color:var(--ink)}
+.art-in blockquote{
+  margin:20px 0;padding:14px 18px;border-left:3px solid var(--teal);
+  background:var(--teal-soft);border-radius:0 10px 10px 0;color:var(--ink-2);
+}
+.art-in .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0;border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh-1)}
+.art-in table{border-collapse:collapse;width:100%;min-width:460px;font-size:.9rem;margin:0}
+.art-in thead th{background:var(--navy);color:#fff;text-align:left;font-size:.82rem;font-weight:700;padding:10px 13px;white-space:nowrap}
+.art-in tbody td,.art-in tbody th{padding:9px 13px;border-bottom:1px solid var(--line);color:var(--ink-2);vertical-align:top}
+.art-in tbody tr:nth-child(even){background:var(--wash)}
+.art-in tbody tr:last-child td{border-bottom:none}
+
+/* faktaboks, advarsel og kildeblok */
+.art-note,.art-warn,.art-src{border-radius:12px;padding:15px 18px;margin:20px 0;font-size:.94rem;line-height:1.65}
+.art-note{background:var(--teal-soft);border:1px solid #b8d8e6;color:var(--teal-deep)}
+.art-warn{background:var(--gold-soft);border:1px solid #f0d79a;color:#7a4f10}
+.art-src{background:var(--wash);border:1px solid var(--line);color:var(--ink-2);font-size:.85rem}
+.art-note strong,.art-warn strong{color:inherit}
+
+/* relaterede artikler */
+.art-rel{margin:34px 0 0;padding:20px 22px;background:var(--wash);border:1px solid var(--line);border-radius:var(--r)}
+.art-rel h2{font-size:1rem!important;margin:0 0 10px!important}
+.art-rel ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.art-rel li{margin:0}
+.art-rel a{font-weight:600;text-decoration:none}
+.art-rel a:hover{text-decoration:underline}

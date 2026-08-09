@@ -235,6 +235,12 @@
     +'<circle cx="7.5" cy="17.5" r="1.6"/><circle cx="16.5" cy="17.5" r="1.6"/></svg>';
   document.querySelectorAll('.cd-img img, .co-l img, .lw img').forEach(function(im){
     im.addEventListener('error',function(){
+      /* .webp findes ikke? prøv .png, før vi giver op */
+      if(!im.dataset.retried && /\.webp$/i.test(im.getAttribute('src')||'')){
+        im.dataset.retried='1';
+        im.src=im.getAttribute('src').replace(/\.webp$/i,'.png');
+        return;
+      }
       var w=im.parentNode;
       w.classList.add('cd-noimg');
       w.innerHTML=ICON;

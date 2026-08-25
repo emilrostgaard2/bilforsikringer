@@ -1,0 +1,133 @@
+RewriteEngine On
+
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+RewriteRule ^(.*)$ https://bilforsikringer.nu/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.bilforsikringer\.nu$ [NC]
+RewriteRule ^(.*)$ https://bilforsikringer.nu/$1 [R=301,L]
+
+RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{2,5}$
+RewriteCond %{REQUEST_URI} !/$
+RewriteRule ^(.*)$ /$1/ [R=301,L]
+RewriteRule ^wp-content/uploads/2026/(.*)$ /billeder/$1 [R=301,L]
+
+RewriteRule ^wp-(admin|includes|json|login\.php) - [R=410,L]
+RewriteRule ^wp-content/(themes|plugins|cache)/ - [R=410,L]
+
+AddType font/woff2 .woff2
+AddType image/webp .webp
+AddType application/manifest+json .webmanifest
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/json text/xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+  ExpiresByType text/javascript           "access plus 1 year"
+  ExpiresByType font/woff2                "access plus 1 year"
+  ExpiresByType image/webp                "access plus 1 year"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  ExpiresByType image/x-icon              "access plus 1 year"
+  ExpiresByType text/html                 "access plus 1 hour"
+  ExpiresByType application/xml           "access plus 1 day"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff2?|webp|png|jpe?g|svg|ico)$">
+    Header unset Pragma
+    Header unset Expires
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(html|xml|json|webmanifest)$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css application/javascript image/svg+xml application/json text/xml
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always unset X-Powered-By
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+RedirectMatch 301 "^/Lastbilforsikring/?$" "/lastbilforsikring/"
+RedirectMatch 301 "^/artikler/bilforsikring\-brugt\-bil/?$" "/bilforsikring-brugt-bil/"
+RedirectMatch 301 "^/artikler/bilforsikring\-haervaerk/?$" "/haervaerk/"
+RedirectMatch 301 "^/artikler/forsikring\-naer\-du\-saelger\-din\-bil/?$" "/forsikring-naer-du-saelger-din-bil/"
+RedirectMatch 301 "^/artikler/totalskade\-bil/?$" "/totalskade-bil/"
+RedirectMatch 301 "^/audi/q4\-e\-tron/?$" "/audi/q4-etron/"
+RedirectMatch 301 "^/audi/q7/?$" "/audi/"
+RedirectMatch 301 "^/audi/q8\-e\-tron/?$" "/audi/e-tron/"
+RedirectMatch 301 "^/bmw/ix/?$" "/bmw/ix1/"
+RedirectMatch 301 "^/bmw/x1/?$" "/bmw/x3/"
+RedirectMatch 301 "^/bonus/?$" "/bonusklasse/"
+RedirectMatch 301 "^/delkasko/?$" "/ordbog/delkasko/"
+RedirectMatch 301 "^/firmabil/?$" "/ordbog/firmabil/"
+RedirectMatch 301 "^/foererdaekning/?$" "/ordbog/foererulykke/"
+RedirectMatch 301 "^/groent\-kort/?$" "/ordbog/groent-kort/"
+RedirectMatch 301 "^/metode/?$" "/redaktionel-metode/"
+RedirectMatch 301 "^/mg/?$" "/bilmaerker/"
+RedirectMatch 301 "^/ordbog/anciennitet/?$" "/bonusklasse/"
+RedirectMatch 301 "^/ordbog/friskadedaekning/?$" "/kaskoforsikring/"
+RedirectMatch 301 "^/ordbog/kilometerbegraensning/?$" "/ordbog/kilometerbegransning/"
+RedirectMatch 301 "^/ordbog/markedsvaerdi/?$" "/ordbog/vaerdiforringelse/"
+RedirectMatch 301 "^/ordbog/medforsikret\-foerer/?$" "/ordbog/foererulykke/"
+RedirectMatch 301 "^/ordbog/nyvaerdi/?$" "/ordbog/vaerdiforringelse/"
+RedirectMatch 301 "^/ordbog/partiel\-skade/?$" "/ordbog/parkeringsskade/"
+RedirectMatch 301 "^/ordbog/passagerdaekning/?$" "/ordbog/foererulykke/"
+RedirectMatch 301 "^/ordbog/skadehistorik/?$" "/bonusklasse/"
+RedirectMatch 301 "^/ordbog/taksering/?$" "/ordbog/skadesanmeldelse/"
+RedirectMatch 301 "^/ordbog/udlandsdaekning/?$" "/ordbog/groent-kort/"
+RedirectMatch 301 "^/ordbog/vaerkstedsvalg/?$" "/ordbog/skadesanmeldelse/"
+RedirectMatch 301 "^/peugeot/2008/?$" "/peugeot/2008-pris/"
+RedirectMatch 301 "^/peugeot/208/?$" "/peugeot/208-pris/"
+RedirectMatch 301 "^/peugeot/3008/?$" "/peugeot/3008-pris/"
+RedirectMatch 301 "^/peugeot/307\-pris/?$" "/peugeot/308-pris/"
+RedirectMatch 301 "^/phev/?$" "/hybridbil/"
+RedirectMatch 301 "^/redaktion/emil\-rostgaard\-clausen/?$" "/emil-clausen/"
+RedirectMatch 301 "^/selvrisiko\-bilforsikring/?$" "/selvrisiko-paa-bilforsikring/"
+RedirectMatch 301 "^/tesla/model\-3/?$" "/tesla/model3/"
+RedirectMatch 301 "^/tesla/model3\-long\-range/?$" "/tesla/model3/"
+RedirectMatch 301 "^/toyota/aygo\-x/?$" "/toyota/aygo/"
+RedirectMatch 301 "^/ung\-bilist/?$" "/unge/"
+RedirectMatch 301 "^/volvo/v90\-cross\-country/?$" "/volvo/v60-cross-country/"
+
+RedirectMatch 301 "^/author/admin/page/[0-9]+/?$" "/emil-clausen/"
+RedirectMatch 301 "^/author/.*$" "/emil-clausen/"
+
+RedirectMatch 301 "^/under-25/?$" "/unge/"
+RedirectMatch 301 "^/skifte-bilforsikring/?$" "/skift/"
+RedirectMatch 301 "^/cookiepolitik/?$" "/cookiepolitik-eu/"
+RedirectMatch 301 "^/tesla/models/?$" "/tesla/"
+RedirectMatch 301 "^/volkswagen/ex40/?$" "/volvo/ex40/"
+RedirectMatch 301 "^/category/bilforsikring/?$" "/artikler/"
+RewriteRule "^gr%C3%B8nt-kort/?$" "/ordbog/groent-kort/" [R=301,L]
+
+RedirectMatch 301 "^/peugeot/208-pris/208-pris/?$" "/peugeot/208-pris/"
+RewriteRule "^ordbog/([a-z-]+)/https?:.*$" "/ordbog/$1/" [R=301,L]
+RewriteRule "^ordbog/([a-z-]+)/+ordbog/.*$" "/ordbog/$1/" [R=301,L]
+RewriteRule "^ordbog/([a-z-]+)//.*$" "/ordbog/$1/" [R=301,L]
+
+RedirectMatch 301 "^/comments/feed/?$" "/artikler/"
+RedirectMatch 301 "^/category/[^/]+/feed/?$" "/artikler/"
+RedirectMatch 301 "^/(.+)/feed/?$" "/$1/"
+
+RedirectMatch 410 "^/elementor-[0-9]+/?$"
+RedirectMatch 410 "^/search/.*$"
+RewriteRule "^%C3%A5r/?$" "-" [R=410,L]
+
+ErrorDocument 404 /404.html

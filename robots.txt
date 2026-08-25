@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /author/
+Disallow: /category/
+Disallow: /*?utm_
+Disallow: /*?fbclid
 
 Sitemap: https://bilforsikringer.nu/sitemap.xml

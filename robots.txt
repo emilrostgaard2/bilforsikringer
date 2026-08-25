@@ -1,8 +1,12 @@
 User-agent: *
 Allow: /
-Disallow: /author/
-Disallow: /category/
+
+# Bemærk: /author/ og /category/ er BEVIDST ikke blokeret her.
+# De har 301/noindex, og Google skal kunne crawle dem for at se det.
+# Blokering ville fastholde dem i indekset i stedet for at fjerne dem.
+
 Disallow: /*?utm_
 Disallow: /*?fbclid
+Disallow: /*?s=
 
 Sitemap: https://bilforsikringer.nu/sitemap.xml

@@ -1,12 +1,55 @@
+# bilforsikringer.nu
+
 User-agent: *
 Allow: /
-
-# Bemærk: /author/ og /category/ er BEVIDST ikke blokeret her.
-# De har 301/noindex, og Google skal kunne crawle dem for at se det.
-# Blokering ville fastholde dem i indekset i stedet for at fjerne dem.
 
 Disallow: /*?utm_
 Disallow: /*?fbclid
 Disallow: /*?s=
+
+# ── AI- og svarmaskine-crawlere ─────────────────────────────
+# Eksplicit adgang, så indholdet kan hentes og citeres i AI-svar.
+# Bemærk: search-crawlerne (OAI-SearchBot, PerplexityBot, Claude-SearchBot)
+# er dem der giver citation. Trænings-crawlerne (GPTBot, ClaudeBot, CCBot)
+# giver ikke citation — slet deres linjer hvis du ikke vil trænes på.
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
 
 Sitemap: https://bilforsikringer.nu/sitemap.xml

@@ -266,3 +266,65 @@
     });
   });
 })();
+
+
+/* ── Konverteringssporing (GA4) ───────────────────────────── */
+(function () {
+  function ev(name, props) {
+    if (typeof window.gtag === 'function') window.gtag('event', name, props || {});
+  }
+  function side() { return location.pathname; }
+
+  // 1. Klik på nummerplade-CTA (hero, midt, bund, sticky)
+  document.addEventListener('click', function (e) {
+    var b = e.target.closest('[data-go], .bh-cta, .btn[data-go], .cta-go');
+    if (!b) return;
+    var plateId = b.getAttribute('data-go') || '';
+    var el = plateId ? document.getElementById(plateId) : null;
+    var udfyldt = !!(el && el.value && el.value.replace(/\s/g, '').length >= 5);
+    var placering = b.closest('.bfn-hero') ? 'hero'
+                  : b.closest('.sticky')   ? 'sticky'
+                  : b.closest('.cta')      ? 'sidefod' : 'andet';
+    ev('cta_klik', { side: side(), placering: placering, nummerplade: udfyldt ? 'ja' : 'nej' });
+  }, true);
+
+  // 2. Klik videre til affiliate-partner
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="findforsikring.dk"]');
+    if (!a) return;
+    ev('til_partner', { side: side(), type: 'tekstlink' });
+  }, true);
+
+  // 3. window.open fanges også (knapperne bruger den)
+  var _open = window.open;
+  window.open = function (url) {
+    try {
+      if (typeof url === 'string' && url.indexOf('findforsikring.dk') > -1) {
+        ev('til_partner', { side: side(), type: 'knap' });
+      }
+    } catch (err) {}
+    return _open.apply(window, arguments);
+  };
+
+  // 4. Læsedybde — viser om folk faktisk læser de lange sider
+  var naaet = {};
+  function dybde() {
+    var h = document.body.scrollHeight - window.innerHeight;
+    if (h <= 0) return;
+    var pct = Math.round((window.scrollY / h) * 100);
+    [25, 50, 75, 90].forEach(function (m) {
+      if (pct >= m && !naaet[m]) { naaet[m] = 1; ev('laesedybde', { side: side(), dybde: m }); }
+    });
+  }
+  var t;
+  window.addEventListener('scroll', function () {
+    clearTimeout(t); t = setTimeout(dybde, 250);
+  }, { passive: true });
+
+  // 5. FAQ-åbninger — viser hvilke spørgsmål der faktisk interesserer
+  document.addEventListener('click', function (e) {
+    var q = e.target.closest('.bfna-faq-q, .kg-fq, .faq-q');
+    if (!q) return;
+    ev('faq_aabnet', { side: side(), spoergsmaal: (q.textContent || '').trim().slice(0, 60) });
+  }, true);
+})();

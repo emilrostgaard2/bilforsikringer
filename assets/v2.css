@@ -945,3 +945,11 @@ main > *:first-child{margin-top:0}
 #bfn-cc .no{background:var(--paper);color:var(--ink-2)}
 #bfn-cc .no:hover{background:var(--wash)}
 @media(max-width:560px){#bfn-cc .bfn-cc-btns button{flex:1 1 100%}}
+
+/* ── Redaktionelt billede i brødtekst ───────────────────────── */
+.bfn-fig{margin:34px auto;max-width:900px;padding:0 20px}
+.bfn-fig img{width:100%;height:auto;display:block;border-radius:14px;
+ border:1px solid var(--line);background:var(--wash)}
+.bfn-fig figcaption{font-size:.82rem;color:var(--muted);line-height:1.5;
+ margin-top:10px;padding-left:2px}
+@media(max-width:640px){.bfn-fig{margin:24px auto;padding:0 14px}}

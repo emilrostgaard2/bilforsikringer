@@ -18,7 +18,7 @@ Drop-in: erstat repoets filer, commit og push. Kun kode/metadata – ingen brød
 - 25 titles > 60 tegn og 18 descriptions > 160 tegn – redaktionelt valg.
 
 ## /trods-rki/ – genopbygget (3. sep. 2026)
-- Siden er skrevet forfra på det rene artikel-template (samme som fx /udlaan-af-bil-til-ven/): 88 KB → 47 KB, 2.794 → ~1.640 ord, 4 CTA-bokse → 2, ingen sidespecifik CSS ud over tre linjer til tabelombrydning.
+- Siden er skrevet forfra som ren artikel: H1, kort svar, 7 tabeller, 2 nummererede lister, 9 FAQ som H3+P, 29 interne links, 2 tekst-CTA-links. Ingen hero-boks, ingen farvede bokse, ingen kort. 88 KB → 45 KB.
 - Struktur: kort svar → nøgletal → rettigheder → selskaber → priser → 7 trin → dokumentation → eksisterende police → ud af RKI → 8 FAQ → læs også.
 - Skema: WebPage, BreadcrumbList, Article, FAQPage (8 spørgsmål = de 8 synlige). HowTo fjernet (giver ikke længere rich results).
 - Title 58 tegn, description 145 tegn, og:image = /billeder/trods-rki.webp (ligger i zippen – skal uploades manuelt til billeder/).

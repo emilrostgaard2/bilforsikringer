@@ -26,7 +26,7 @@ Drop-in: erstat repoets filer, commit og push. Kun kode/metadata – ingen brød
 ## Runde 3 (3. sep. 2026, aften)
 - Sticky-bar (bund-CTA): v2.js observerede `.plate` – og fandt sin egen plade inde i sticky-baren. Når baren gled ind, forsvandt pladen fra viewport, baren gled ud, pladen kom ind … uendelig flimren. Nu: observerer kun plader uden for baren, viser først efter 320 px scroll, skjuler når footeren er synlig. Cache-bust: v2.js og site.css → ?v=20260904 på alle 326 sider.
 - site.css: box-shadow-typo (`0-6px`) rettet. Tre linjer til tabelombrydning i artikler flyttet fra /trods-rki/ ind i site.css, så alle artikelsider får dem.
-- /trods-rki/: standard-hero tilbage (hubhero + nummerplade). Ny tabel "ansvarsforsikring med RKI selskab for selskab" – 12 selskaber, standardpris → RKI-interval, ansvar/kasko-status. 2.300 ord, 8 tabeller.
+- /trods-rki/: den store bfn-hero (som /skift/) med tjekliste og nummerplade-kort. Ny tabel "ansvarsforsikring med RKI selskab for selskab" – 12 selskaber, standardpris → RKI-interval, ansvar/kasko-status. 2.300 ord, 8 tabeller.
 - 13 selskabssider (alka, alm-brand, aros, codan, fdm, forsia, gjensidige, if, topdanmark, tryg, tjm, abcforsikring, gf): 
   - Dubletter fjernet: hver side havde et påhængt art-in-blok med "Er X det rigtige valg for dig?" og "Skadeforløbet hos X", som allerede fandtes i hovedindholdet (17 blokke fjernet, verificeret mod hovedindholdet – tjm/gf fik deres beholdt, da der ikke var dubletter).
   - Ny tabel "X mod alle selskaber: priser 2026" – alle 13 selskaber, sorteret efter ansvarspris, eget selskab fremhævet, med links. Bygget af sitets egne standardpriser.

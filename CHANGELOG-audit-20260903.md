@@ -35,3 +35,13 @@ Drop-in: erstat repoets filer, commit og push. Kun kode/metadata – ingen brød
   - /alka/: konkurrent-tabellen listede Alka to gange – rettet.
   - Forfatterboksens `<h2>Emil Rostgaard Clausen</h2>` (11 sider) → `<p>`; et navn er ikke en sektionsoverskrift.
 - Coop mangler standardpris-tabel og er derfor ikke med i markedstabellen – tilføj en ansvarspris, så tager jeg den med.
+
+## Runde 4 – /trods-rki/ finpudset
+- H1 = "Bilforsikring trods RKI" (sort, ét søgeord). Underrubrik og tre tjekpunkter bærer budskabet.
+- Hero (globalt, site.css): 1320 px bred, 25 % mindre luft top/bund. Gælder alle 130 sider med bfn-hero.
+- Ny forfatter-metalinje (foto, navn, rolle, dato, læsetid) og indholdsfortegnelse med ankerlinks til alle 12 afsnit.
+- Første H2 er nu selve spørgsmålet ("Kan du få bilforsikring, når du står i RKI?") med svaret direkte under – det er det format, AI Overviews og featured snippets trækker. Speakable-markup på det afsnit.
+- FAQ som dropdown (details/summary), 10 spørgsmål, skema matcher.
+- Forfatterboks med foto, erfaring, uafhængighedserklæring og LinkedIn før "Læs også" (E-E-A-T).
+- H-struktur: H1 → 14 H2 → ingen H3 (prisfaktorer løftet til H2, da tabellen ellers lå under forkert H2).
+- site.css → ?v=20260905 på alle sider.

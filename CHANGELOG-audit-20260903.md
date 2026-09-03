@@ -22,3 +22,16 @@ Drop-in: erstat repoets filer, commit og push. Kun kode/metadata – ingen brød
 - Struktur: kort svar → nøgletal → rettigheder → selskaber → priser → 7 trin → dokumentation → eksisterende police → ud af RKI → 8 FAQ → læs også.
 - Skema: WebPage, BreadcrumbList, Article, FAQPage (8 spørgsmål = de 8 synlige). HowTo fjernet (giver ikke længere rich results).
 - Title 58 tegn, description 145 tegn, og:image = /billeder/trods-rki.webp (ligger i zippen – skal uploades manuelt til billeder/).
+
+## Runde 3 (3. sep. 2026, aften)
+- Sticky-bar (bund-CTA): v2.js observerede `.plate` – og fandt sin egen plade inde i sticky-baren. Når baren gled ind, forsvandt pladen fra viewport, baren gled ud, pladen kom ind … uendelig flimren. Nu: observerer kun plader uden for baren, viser først efter 320 px scroll, skjuler når footeren er synlig. Cache-bust: v2.js og site.css → ?v=20260904 på alle 326 sider.
+- site.css: box-shadow-typo (`0-6px`) rettet. Tre linjer til tabelombrydning i artikler flyttet fra /trods-rki/ ind i site.css, så alle artikelsider får dem.
+- /trods-rki/: standard-hero tilbage (hubhero + nummerplade). Ny tabel "ansvarsforsikring med RKI selskab for selskab" – 12 selskaber, standardpris → RKI-interval, ansvar/kasko-status. 2.300 ord, 8 tabeller.
+- 13 selskabssider (alka, alm-brand, aros, codan, fdm, forsia, gjensidige, if, topdanmark, tryg, tjm, abcforsikring, gf): 
+  - Dubletter fjernet: hver side havde et påhængt art-in-blok med "Er X det rigtige valg for dig?" og "Skadeforløbet hos X", som allerede fandtes i hovedindholdet (17 blokke fjernet, verificeret mod hovedindholdet – tjm/gf fik deres beholdt, da der ikke var dubletter).
+  - Ny tabel "X mod alle selskaber: priser 2026" – alle 13 selskaber, sorteret efter ansvarspris, eget selskab fremhævet, med links. Bygget af sitets egne standardpriser.
+  - Ny tabel "Hvad koster X for din profil?" – 5 profiler (18 år, Indre København, 0 skadefri år, høj selvrisiko) beregnet af sidens egne profil-effekter. (De 10 sider med standardpris-tabel.)
+  - Ny "Datagrundlag og metode"-blok (som Samlino har, med kilder og link til redaktionel metode).
+  - /alka/: konkurrent-tabellen listede Alka to gange – rettet.
+  - Forfatterboksens `<h2>Emil Rostgaard Clausen</h2>` (11 sider) → `<p>`; et navn er ikke en sektionsoverskrift.
+- Coop mangler standardpris-tabel og er derfor ikke med i markedstabellen – tilføj en ansvarspris, så tager jeg den med.

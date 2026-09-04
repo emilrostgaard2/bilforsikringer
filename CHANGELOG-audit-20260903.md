@@ -51,3 +51,9 @@ Drop-in: erstat repoets filer, commit og push. Kun kode/metadata – ingen brød
 - Nyt: månedspris pr. selskab inkl. gebyr (10 selskaber, beregnet af sitets egne standardpriser) og "5 fejl"-tabel med kronebeløb. Gamle uoverensstemmelser rettet (siden sagde både "Topdanmark tilbyder gratis" og "gebyr 3–7 %", og hero-tal og tabel-tal var forskellige).
 - Nyt billede: billeder/maanedlig-betaling.webp (1200×655, 42 KB) – SKAL uploades manuelt til billeder/.
 - Sitemap-lastmod 2026-09-04.
+
+## 4. sep. 2026 – /udland/ genopbygget + bredere artikler
+- /udland/: samme skabelon. H1 "Bilforsikring i udlandet". 10 tabeller (nøgletal, dækning pr. område, land for land med grønt kort-status, grønt kort-trin, tillæg med priser, selskaber, 3 eksempler, tjekliste, leasing/længere ophold), uheldsliste, 10 FAQ. Faktuelle fejl fra den gamle side rettet ("34 EU/EØS-lande" → 27+3; grønt kort er ikke krævet i EU/EØS, Schweiz, UK, Serbien, Bosnien, Montenegro).
+- Søgeord dækket i H1, title, første afsnit og H2: "bilforsikring i udlandet", "kørsel i udlandet", "dækning i udlandet".
+- Artikelbredde: ny klasse art-wide (860 px mod 780) på /trods-rki/, /maanedlig-betaling/ og /udland/. site.css → ?v=20260906.
+- Billedet /billeder/udland.webp ligger allerede på serveren – intet at uploade.

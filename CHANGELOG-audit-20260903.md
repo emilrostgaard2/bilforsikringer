@@ -45,3 +45,9 @@ Drop-in: erstat repoets filer, commit og push. Kun kode/metadata – ingen brød
 - Forfatterboks med foto, erfaring, uafhængighedserklæring og LinkedIn før "Læs også" (E-E-A-T).
 - H-struktur: H1 → 14 H2 → ingen H3 (prisfaktorer løftet til H2, da tabellen ellers lå under forkert H2).
 - site.css → ?v=20260905 på alle sider.
+
+## 4. sep. 2026 – /maanedlig-betaling/ genopbygget
+- Samme skabelon som /trods-rki/: bfn-hero med sort H1 "Bilforsikring med månedlig betaling", metalinje, indholdsfortegnelse, spørgsmål-som-H2 med kort svar, 9 tabeller, 6-trins liste, 10 FAQ som dropdown, forfatterboks, kilder. 79 KB → 50 KB.
+- Nyt: månedspris pr. selskab inkl. gebyr (10 selskaber, beregnet af sitets egne standardpriser) og "5 fejl"-tabel med kronebeløb. Gamle uoverensstemmelser rettet (siden sagde både "Topdanmark tilbyder gratis" og "gebyr 3–7 %", og hero-tal og tabel-tal var forskellige).
+- Nyt billede: billeder/maanedlig-betaling.webp (1200×655, 42 KB) – SKAL uploades manuelt til billeder/.
+- Sitemap-lastmod 2026-09-04.

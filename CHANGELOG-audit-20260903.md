@@ -71,3 +71,6 @@ Drop-in: erstat repoets filer, commit og push. Kun kode/metadata – ingen brød
 - Årsag 3: mobilmenuen ligger translateX(100%) uden for skærmen, og html manglede overflow-x:clip → scrollWidth 780 px på alle sider (iOS lader brugeren scrolle sidelæns).
 - Årsag 4: sidespecifikke 2-koloners grids (tjm, hyundai, xpeng, peugeot) brød ved 360 px → én kolonne under 400 px.
 - Resultat: 0 sider med overflow ved 360 og 390 px. site.css/v2.js → ?v=20260916.
+
+## 16. sep. 2026 – deploy.yml: --only-newer fjernet
+- Årsagen til, at .htaccess, site.css og v2.js flere gange ikke kom op: lftp `--only-newer` springer filer over, hvis serverens kopi har nyere tidsstempel (fx efter manuel redigering i file manager). Nu uploades alle filer ved hvert deploy (~7 min). billeder/ er stadig udeladt.

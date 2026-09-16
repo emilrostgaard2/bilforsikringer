@@ -34,10 +34,10 @@ jobs:
             set mirror:parallel-transfer-count 1;
             open -u '$BRUGER','$KODE' '$SERVER';
             mirror --reverse --continue --verbose=1 \
-              --include-glob '.htaccess' \
               --exclude-glob .git/ \
               --exclude-glob .github/ \
               --exclude-glob '*.md' \
+              --exclude-glob '.DS_Store' \
               --exclude 'billeder/' \
               ./ public_html/;
           "

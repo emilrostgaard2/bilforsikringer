@@ -57,3 +57,17 @@ Drop-in: erstat repoets filer, commit og push. Kun kode/metadata – ingen brød
 - Søgeord dækket i H1, title, første afsnit og H2: "bilforsikring i udlandet", "kørsel i udlandet", "dækning i udlandet".
 - Artikelbredde: ny klasse art-wide (860 px mod 780) på /trods-rki/, /maanedlig-betaling/ og /udland/. site.css → ?v=20260906.
 - Billedet /billeder/udland.webp ligger allerede på serveren – intet at uploade.
+
+## 9. sep. 2026 – tegnsæt (kandidat til AI Overview-faldet)
+- Search Console "Generativ AI-funktioner" viser et lodret fald fra ~1.000 til ~50 daglige AI-eksponeringer på flyttedagen (ca. 15.–17. aug.), mens placeringer og klik er intakte. Samme mønster på alle flyttede sites.
+- Fundet: den statiske version leveres som `Content-Type: text/html` UDEN charset. WordPress sendte `text/html; charset=UTF-8`. Googlebot/indeksering læser <meta charset> og er upåvirket – men et udtræk, der stoler på HTTP-headeren, dekoder dansk som ISO-8859-1 (æøå → Ã¦Ã¸Ã¥). Samme fejl ses direkte i robots.txt-kommentarerne på det live site.
+- Rettelse i .htaccess: AddDefaultCharset UTF-8 + AddCharset + eksplicit Content-Type for .html/.txt/.xml.
+- Verificér efter deploy: curl -I https://bilforsikringer.nu/ skal vise "Content-Type: text/html; charset=UTF-8". Følg derefter Generativ AI-grafen i Search Console i 7–14 dage.
+
+## 16. sep. 2026 – mobil (systematisk fejl fra flytningen)
+- Automatisk scanning af alle 325 sider ved 390 px og 360 px: 85 sider havde reel vandret scroll, og forsiden var 424 px bred i en 390 px skærm.
+- Årsag 1: <input> i nummerplade-feltet har en indbygget bredde på ~280 px og var ikke sat til min-width:0 → hele kortet (og hero-gridet) blev tvunget bredere end skærmen. Ramte forsiden og ~40 sider med cta-card.
+- Årsag 2: 28 ordbogs-/artikelsider havde tabeller uden .tbl-wrapper → tabellen tvang siden bred. Nu wrappes alle tabeller automatisk (v2.js) + CSS-fallback.
+- Årsag 3: mobilmenuen ligger translateX(100%) uden for skærmen, og html manglede overflow-x:clip → scrollWidth 780 px på alle sider (iOS lader brugeren scrolle sidelæns).
+- Årsag 4: sidespecifikke 2-koloners grids (tjm, hyundai, xpeng, peugeot) brød ved 360 px → én kolonne under 400 px.
+- Resultat: 0 sider med overflow ved 360 og 390 px. site.css/v2.js → ?v=20260916.

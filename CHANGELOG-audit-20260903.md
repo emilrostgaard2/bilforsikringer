@@ -74,3 +74,8 @@ Drop-in: erstat repoets filer, commit og push. Kun kode/metadata – ingen brød
 
 ## 16. sep. 2026 – deploy.yml: --only-newer fjernet
 - Årsagen til, at .htaccess, site.css og v2.js flere gange ikke kom op: lftp `--only-newer` springer filer over, hvis serverens kopi har nyere tidsstempel (fx efter manuel redigering i file manager). Nu uploades alle filer ved hvert deploy (~7 min). billeder/ er stadig udeladt.
+
+## 17. sep. 2026 – hero på mobil (23 sider)
+- 23 sider (billigste, skift, unge m.fl.) har en sidespecifik `.bfn-hero .bh-grid{grid-template-columns:1.15fr .85fr!important}` i eget <style>, som slog site.css' mobil-regel, fordi begge har !important og side-stylen kommer sidst. Resultat: to smalle kolonner på mobil, ulæselig H1 og knap.
+- Rettet i site.css med højere specificitet (section.bfn-hero div.bh-grid) under 940 px → én kolonne. Scanning af alle 325 sider ved 390 px: 0 med flerkolonne-hero, 0 med overflow.
+- CSS-fil omdøbt til site-20260917.css, så den ikke kan blive sprunget over ved upload.

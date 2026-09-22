@@ -7,6 +7,12 @@ function fmt(v){var t=v.toUpperCase().replace(/[^A-Z0-9]/g,''),a='',m='';for(var
 [].forEach.call(d.querySelectorAll('[data-cta]'),function(f){var i=f.querySelector('input[name=nummerplade]'),p=f.querySelector('.plate');
 i.addEventListener('input',function(){i.value=fmt(i.value);p.classList.remove('err')});
 f.addEventListener('submit',function(e){var v=i.value.replace(/\s/g,'');if(v&&!/^[A-Z]{2}\d{5}$/.test(v)){e.preventDefault();p.classList.add('err');i.focus();return}if(window.gtag)gtag('event','cta_submit',{placement:(f.querySelector('[name=utm_content]')||{}).value})})});
+
+var ci=d.getElementById('cx'),co=d.getElementById('cout');
+if(ci&&co){var f=function(n){return n.toLocaleString('da-DK',{maximumFractionDigits:0})+' kr.'};
+var calc=function(){var tot=Math.max(0,parseFloat(ci.value||0));var pre=tot/1.429,afg=tot-pre,pct=tot?Math.round(afg/tot*100):0;
+co.innerHTML='<div class="bar"><i style="width:'+pct+'%"></i></div><div class="row"><span>Afgift til staten (42,9 %)</span><b>'+f(afg)+'</b></div><div class="row"><span>Selskabets præmie</span><b>'+f(pre)+'</b></div><div class="row"><span>Du betaler i alt</span><span>'+f(tot)+'</span></div>'};
+ci.addEventListener('input',calc);calc()}
 var K='bf-consent',GA='G-LJNJX55H0P';
 function load(){if(window.gtag)return;var s=d.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+GA;d.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',GA,{anonymize_ip:true})}
 var v=null;try{v=localStorage.getItem(K)}catch(e){}

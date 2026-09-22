@@ -148,3 +148,15 @@ p,li,h1,h2,h3,summary,.lead{overflow-wrap:break-word}td{hyphens:auto;-webkit-hyp
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}
 @media print{.top,.hero .cta,.rail,.foot,.cc,.cta{display:none}}
 @media(max-width:600px){.answer{padding:18px 18px 18px 18px}.answer::before{width:22px;height:22px;left:18px;top:19px;background-size:22px}.answer b.sans{padding-left:32px}}
+.calc{margin-top:8px}
+.calcbox{background:var(--bg);border:1px solid var(--line);border-radius:var(--r);padding:20px;margin:16px 0 10px}
+.calcbox label{display:block;font-weight:600;color:var(--navy);margin-bottom:8px}
+.cin{display:flex;align-items:center;gap:8px;max-width:260px}
+.cin input{flex:1 1 0;min-width:0;font:600 1.2rem/1 var(--f);padding:12px;border:2px solid var(--line);border-radius:10px;background:#fff;color:var(--navy)}
+.cin input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px var(--teal-l)}
+.cin span{color:var(--mute);font-weight:600}
+.calcbox output{display:block;margin-top:16px}
+.calcbox .row{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:1rem}
+.calcbox .row:last-child{border-bottom:0;font-weight:700;color:var(--navy)}
+.calcbox .bar{height:12px;border-radius:6px;background:var(--teal-l);overflow:hidden;margin:10px 0 4px}
+.calcbox .bar i{display:block;height:100%;background:var(--teal)}

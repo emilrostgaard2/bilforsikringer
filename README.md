@@ -13,7 +13,9 @@ Hele sitet er genereret fra bunden: ny skabelon, nyt design, én CSS-fil og én 
 
 ## Design
 IBM Plex Sans (overskrifter, UI) + IBM Plex Serif (brødtekst), selvhostet. Farver: blæk #1d2830, vejgul #f3c332, papir #fff, vask #f1f4f5, link #1b5c9e.
-Ingen nummerplade-felt: CTA'en siger ærligt, at man sendes til FindForsikring.
+CTA: nummerpladefelt + grøn knap (hero, midt i artiklen, sticky i højre side på desktop). Formularen sender til FindForsikring med UTM pr. side og placering.
+Menu: dropdowns (Bilforsikring, Målgrupper, Selskaber, Bilmærker) – rene <details>-links, crawlbare uden JS, accordion på mobil.
+Modelnavne i brødteksten linkes automatisk til modelsiderne (maks. 8 pr. side, første forekomst).
 
 ## Bevidst IKKE gjort (kræver redaktionel beslutning)
 - Tekstindholdet på de 315 gamle sider er overført og renset (emojis, dubletter, gentagne standardafsnit, udokumenterede "efterprøvet/prissampling"-påstande), men ikke omskrevet. Mange model- og selskabssider indeholder stadig egne prisestimater ("billigst i vores oversigt"). Disse skal gennemgås side for side.

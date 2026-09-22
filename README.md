@@ -12,7 +12,7 @@ Hele sitet er genereret fra bunden: ny skabelon, nyt design, én CSS-fil og én 
 /affiliate-oplysning/, /kontakt/, /kilder/ (og /redaktionel-metode/, /emil-clausen/ er skrevet om).
 
 ## Design
-Barlow Condensed (overskrifter) + Barlow (tekst), selvhostet – en skrift tegnet efter vejskilte og nummerplader. Farver: sort #000, vejskiltegul #ffd400, nummerpladeblå #1639a3, signalgrøn #0c8a3f (knapper), rød pladekant #c8102e. Motiver: vejstriber over overskrifter, "Kort svar" som gult vejskilt, CTA som dansk nummerplade.
+Schibsted Grotesk (hele sitet) + Spline Sans Mono (nummerpladen) – samme skrifter som det oprindelige brand. Farver: navy #1e2b3a, teal #1f7fa3, grøn CTA #1c9a55, lys baggrund #f5f8fb. Afrundede kort (14 px), bløde skygger, mint "Kort svar"-boks med flueben, tillidsmærker under knappen (Gratis, Ingen binding, Tager 2 minutter).
 CTA: nummerpladefelt + grøn knap (hero, midt i artiklen, sticky i højre side på desktop). Formularen sender til FindForsikring med UTM pr. side og placering.
 Menu: dropdowns (Bilforsikring, Målgrupper, Selskaber, Bilmærker) – rene <details>-links, crawlbare uden JS, accordion på mobil.
 Modelnavne i brødteksten linkes automatisk til modelsiderne (maks. 8 pr. side, første forekomst).

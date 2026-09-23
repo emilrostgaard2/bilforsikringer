@@ -13,6 +13,14 @@ if(ci&&co){var f=function(n){return n.toLocaleString('da-DK',{maximumFractionDig
 var calc=function(){var tot=Math.max(0,parseFloat(ci.value||0));var pre=tot/1.429,afg=tot-pre,pct=tot?Math.round(afg/tot*100):0;
 co.innerHTML='<div class="bar"><i style="width:'+pct+'%"></i></div><div class="row"><span>Afgift til staten (42,9 %)</span><b>'+f(afg)+'</b></div><div class="row"><span>Selskabets præmie</span><b>'+f(pre)+'</b></div><div class="row"><span>Du betaler i alt</span><span>'+f(tot)+'</span></div>'};
 ci.addEventListener('input',calc);calc()}
+
+var mb=d.getElementById('mbar');
+if(mb&&innerWidth<=1080){var forms=[].slice.call(d.querySelectorAll('form[data-cta]')),ft=d.querySelector('footer'),vis=0,fv=false,T;
+function upd(){var show=!vis&&!fv&&scrollY>500;if(show){mb.hidden=false;d.body.classList.add('hasbar')}else{mb.hidden=true;d.body.classList.remove('hasbar')}}
+if('IntersectionObserver'in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.__v=e.isIntersecting});vis=forms.some(function(f){return f.__v});upd()},{threshold:0});
+forms.forEach(function(f){io.observe(f)});
+if(ft)new IntersectionObserver(function(e){fv=e[0].isIntersecting;upd()},{threshold:0}).observe(ft)}
+addEventListener('scroll',function(){T||(T=requestAnimationFrame(function(){T=0;upd()}))},{passive:true});upd()}
 var K='bf-consent',GA='G-LJNJX55H0P';
 function load(){if(window.gtag)return;var s=d.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+GA;d.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',GA,{anonymize_ip:true})}
 var v=null;try{v=localStorage.getItem(K)}catch(e){}

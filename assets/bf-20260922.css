@@ -160,3 +160,15 @@ p,li,h1,h2,h3,summary,.lead{overflow-wrap:break-word}td{hyphens:auto;-webkit-hyp
 .calcbox .row:last-child{border-bottom:0;font-weight:700;color:var(--navy)}
 .calcbox .bar{height:12px;border-radius:6px;background:var(--teal-l);overflow:hidden;margin:10px 0 4px}
 .calcbox .bar i{display:block;height:100%;background:var(--teal)}
+/* slut-CTA + mobil-bar */
+.endcta{display:none}
+@media(max-width:1080px){.endcta{display:block;margin-top:28px}}
+.mbar{display:none}
+@media(max-width:1080px){
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:55;background:#fff;border-top:1px solid var(--line);box-shadow:0 -6px 20px rgba(30,43,58,.12);padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:12px}
+.mbar[hidden]{display:none}
+.mbar span{font:600 .92rem/1.25 var(--f);color:var(--navy);flex:1 1 auto}
+.mbar .btn{width:auto;flex:0 0 auto;min-height:48px;padding:10px 18px;font-size:1rem;box-shadow:none}
+body.hasbar{padding-bottom:78px}}
+.foot li a{display:inline-block;padding:6px 0;min-height:32px}
+.cta small{font-size:.83rem}

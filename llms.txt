@@ -1,0 +1,20 @@
+# bilforsikringer.nu
+
+> Uafhængig dansk guide til bilforsikring: hvad ansvar, delkasko og kasko dækker, hvad der styrer prisen, og hvordan selskaberne adskiller sig. Priser er redaktionelle estimater efter en åben metode, ikke tilbud. Fakta er belagt med danske kilder.
+
+## Vigtigste sider
+- [Sammenlign bilforsikring](https://bilforsikringer.nu/): overblik over dækning, pris og selskaber
+- [Bilforsikring pris](https://bilforsikringer.nu/hvad-koster-bilforsikring-gennemsnit/): FDM's gennemsnitspris og vores estimater efter biltype og alder
+- [Billigste bilforsikring](https://bilforsikringer.nu/billigste/): Forbrugerrådet Tænks test og hvad der sænker prisen
+- [Kaskoforsikring](https://bilforsikringer.nu/kaskoforsikring/): hvad kasko dækker og ikke dækker
+- [Ansvarsforsikring](https://bilforsikringer.nu/ansvarsforsikring/): lovkrav, dækning og afgift
+- [Bilforsikring til unge](https://bilforsikringer.nu/unge/): priser og måder at spare
+- [Elbilforsikring](https://bilforsikringer.nu/elbil/): batteri, ladekabel og ladeboks
+- [Bilmærker](https://bilforsikringer.nu/bilmaerker/): forsikring mærke for mærke
+- [Forsikringsselskaber](https://bilforsikringer.nu/forsikringsselskaber/): selskaberne gennemgået
+- [Ordbog](https://bilforsikringer.nu/ordbog/): forsikringsbegreber forklaret
+
+## Metode og kilder
+- [Redaktionel metode](https://bilforsikringer.nu/redaktionel-metode/): sådan beregnes estimaterne
+- [Kilder](https://bilforsikringer.nu/kilder/)
+- [Om os](https://bilforsikringer.nu/om-os/)

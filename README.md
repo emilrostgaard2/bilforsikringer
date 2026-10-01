@@ -128,3 +128,15 @@ Omskrevet med danske kilder: Toyota Yaris, BMW 3-serie, Volvo EX40 (dansk kilde 
 - "Andre modeller fra X" opdateret på 79 modelsider med alle søskendemodeller.
 - /llms.txt tilføjet (oversigt til AI-crawlere).
 - Synlige "Opdateret"-datoer og sitemap-lastmod synkroniseret med dateModified.
+
+## Opdatering (24)
+Omskrevet med danske kilder: Skoda Citigo, Tesla Model X, Suzuki Vitara, VW Passat, Mercedes C-klasse, BMW 1-serie, Toyota RAV4, Skoda Octavia. 65 modelsider omskrevet; 24 tilbage.
+
+## Opdatering (25)
+Omskrevet: Audi e-tron GT, VW Golf GTI, Hyundai Ioniq 6, Volvo XC60, Volvo EX90, Audi Q5, Suzuki Ignis, Peugeot 5008. 73 modelsider omskrevet; 16 tilbage.
+
+## Opdatering (26)
+Omskrevet: VW Touareg, VW T-Roc, Peugeot 3008, Mercedes EQS, Mercedes GLE, Hyundai i20, Hyundai Santa Fe, BMW X3. 81 modelsider omskrevet; 8 tilbage. Alle modelsiders svarboks indeholder nu også forsikringsestimatet (ansvar + kasko, standardprofil).
+
+## Opdatering (27)
+Omskrevet de sidste 8: Peugeot 206, Peugeot Partner, Suzuki SX4 S-Cross, Suzuki Alto, Mercedes A-klasse, Hyundai Tucson, VW Caddy, Renault Clio. Alle modelsider er nu omskrevet med danske kilder.

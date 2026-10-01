@@ -140,3 +140,31 @@ Omskrevet: VW Touareg, VW T-Roc, Peugeot 3008, Mercedes EQS, Mercedes GLE, Hyund
 
 ## Opdatering (27)
 Omskrevet de sidste 8: Peugeot 206, Peugeot Partner, Suzuki SX4 S-Cross, Suzuki Alto, Mercedes A-klasse, Hyundai Tucson, VW Caddy, Renault Clio. Alle modelsider er nu omskrevet med danske kilder.
+
+## Opdatering (28)
+- Svarboksen på alle 89 modelsider starter nu med selve svaret (forsikringsestimatet) og har ingen links; kilderne står i brødteksten og kildelisten. 34–73 ord.
+- Peugeot 206 og Suzuki Alto regnes nu på metodens referencepris for ældre brugt bil (90.000 kr.) i stedet for en lavere værdi, der gav et urealistisk lavt estimat.
+
+## Opdatering (29) – udbygning af modelsider (i gang)
+Tilføjet sektion om brugtpriser/værditab (AutoUncle) på: Tesla Model Y, Tesla Model 3, Skoda Enyaq, Mercedes EQA, VW ID.4. Kun hvor der findes danske markedsdata; nye modeller uden brugtmarked springes over. Hjælper: /home/claude/add_sections.py.
+
+## Opdatering (30)
+Brugtpris-sektioner også på: Peugeot 208, Peugeot 2008, Fiat 500, Toyota Aygo, Audi e-tron, Audi Q4 e-tron, Mercedes EQC, VW ID.3, VW Polo, VW Golf. I alt 15 af 89 modelsider udbygget.
+
+## Opdatering (31)
+Brugtpris-sektioner også på: Toyota bZ4X, Hyundai Ioniq 5, Peugeot 107, Hyundai i10, Audi A3, Tesla Model S, Volvo XC40, Polestar 2, Nissan Ariya, Mercedes GLA. 25 af 89 udbygget.
+
+## Opdatering (32)
+Længere sektioner (2–3 afsnit) på: Skoda Elroq, Xpeng G6, Xpeng G9, Peugeot 3008, Peugeot 5008, Kia EV3, Volvo EX30, BYD Sealion 7. Epiq og GLB sprunget over (intet brugbart dansk brugtmarked endnu). 33 af 89 udbygget.
+
+## Opdatering (33)
+Epiq (batteri, trækvægt, levering 2027) og GLB (800 V, ladning, anhænger) fik sektioner uden brugtpriser. EQE og GLC fik brugtpris-sektioner. 37 af 89 udbygget.
+
+## Opdatering (34)
+Sektioner på Mercedes CLA, BMW 3-serie, Toyota Yaris. Sprunget over: C-klasse og 1-serie (ingen brugbare danske data), X5 og RAV4 (har allerede brugtpris-tabel), EX40 (dækket via XC40-siden). 40 af 89 udbygget.
+
+## Opdatering (35)
+Brugtmarkeds-sektioner på VW ID.7, ID.5, ID. Buzz, Polestar 4, Xpeng P7+ og Zeekr (mærkeside). Alle store elbiler fra VW, Polestar, Xpeng og Zeekr er nu udbygget.
+
+## Opdatering (36)
+Nye modelsider: VW ID.Polo, VW ID.Cross, BMW iX3, Renault 5, Cupra Raval, Born, Formentor, Terramar, Tavascan og Leon. Cupra/formentor-omdirigeringen er fjernet fra .htaccess og slet-workflow. Mærkesider og 'Andre modeller'-lister opdateret. Rettet: VW Golf og Polo manglede forfatterboks og slut-CTA (stod 'None').

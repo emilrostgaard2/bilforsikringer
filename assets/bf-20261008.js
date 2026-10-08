@@ -1,0 +1,35 @@
+(function(){var d=document;
+var b=d.querySelector('.mbtn'),n=d.getElementById('nav');if(b&&n){b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)})}
+var dds=[].slice.call(d.querySelectorAll('.dd'));dds.forEach(function(x){x.addEventListener('toggle',function(){if(x.open&&innerWidth>900)dds.forEach(function(y){if(y!==x)y.open=false})})});
+d.addEventListener('click',function(e){if(innerWidth>900&&!e.target.closest('.dd'))dds.forEach(function(y){y.open=false})});
+d.addEventListener('keydown',function(e){if(e.key==='Escape')dds.forEach(function(y){y.open=false})});
+function ev(name,pl){if(window.gtag)gtag('event',name,{placement:pl})}
+function clean(v){return v.toUpperCase().replace(/[^A-Z0-9ÆØÅ]/g,'')}
+function fmt(v){var t=clean(v);var m=/^([A-Z]{2})(\d{2})(\d{3})$/.exec(t);return m?m[1]+' '+m[2]+' '+m[3]:t}
+[].forEach.call(d.querySelectorAll('form[data-cta]'),function(f){var i=f.querySelector('input[name=nummerplade]'),p=f.querySelector('.plate'),pl=(f.querySelector('[name=utm_content]')||{}).value;
+if(i){i.addEventListener('input',function(){if(p)p.classList.remove('err')});i.addEventListener('blur',function(){i.value=fmt(i.value)})}
+f.addEventListener('submit',function(e){if(i){var v=clean(i.value);if(v&&!/^[A-Z0-9ÆØÅ]{2,7}$/.test(v)){e.preventDefault();if(p)p.classList.add('err');i.focus();return}i.value=fmt(i.value)}ev('cta_submit',pl)})});
+
+var ci=d.getElementById('cx'),co=d.getElementById('cout');
+if(ci&&co){var f=function(n){return n.toLocaleString('da-DK',{maximumFractionDigits:0})+' kr.'};
+var calc=function(){var tot=Math.max(0,parseFloat(ci.value||0));var pre=tot/1.429,afg=tot-pre,pct=tot?Math.round(afg/tot*100):0;
+co.innerHTML='<div class="bar"><i style="width:'+pct+'%"></i></div><div class="row"><span>Afgift (42,9 % af præmien = '+pct+' % af din samlede pris)</span><b>'+f(afg)+'</b></div><div class="row"><span>Selskabets præmie</span><b>'+f(pre)+'</b></div><div class="row"><span>Du betaler i alt</span><span>'+f(tot)+'</span></div>'};
+ci.addEventListener('input',calc);calc()}
+
+var mb=d.getElementById('mbar');
+if(mb){var a=mb.querySelector('a');if(a)a.addEventListener('click',function(){ev('cta_click','mobilbar')});
+var mq=matchMedia('(max-width:1080px)'),forms=[].slice.call(d.querySelectorAll('form[data-cta]')),ft=d.querySelector('footer'),vis=0,fv=false,T;
+function upd(){var show=mq.matches&&!vis&&!fv&&!d.querySelector('.cc');mb.hidden=!show;d.body.classList.toggle('hasbar',show)}
+if('IntersectionObserver'in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.__v=e.isIntersecting});vis=forms.some(function(f){return f.__v});upd()},{threshold:0});
+forms.forEach(function(f){io.observe(f)});
+if(ft)new IntersectionObserver(function(e){fv=e[0].isIntersecting;upd()},{threshold:0}).observe(ft)}
+if(mq.addEventListener)mq.addEventListener('change',upd);
+addEventListener('scroll',function(){T||(T=requestAnimationFrame(function(){T=0;upd()}))},{passive:true});window.__bfupd=upd;upd()}
+var K='bf-consent',GA='G-LJNJX55H0P';
+function load(){if(window.gtag)return;var s=d.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id='+GA;d.head.appendChild(s);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config',GA,{anonymize_ip:true})}
+var v=null;try{v=localStorage.getItem(K)}catch(e){}
+if(v==='y'){load();return}if(v==='n')return;
+var c=d.createElement('div');c.className='cc';c.setAttribute('role','dialog');c.setAttribute('aria-label','Cookies');
+c.innerHTML='<p>Må vi bruge Google Analytics til at se, hvilke sider der bliver læst? Siden virker på samme måde, uanset hvad du vælger. <a href="/cookiepolitik-eu/">Cookiepolitik</a></p><div><button class="y" type="button">Ja, tillad statistik</button><button type="button">Nej tak</button></div>';
+d.body.appendChild(c);if(window.__bfupd)window.__bfupd();var bs=c.querySelectorAll('button');function set(x){try{localStorage.setItem(K,x)}catch(e){}c.remove();if(window.__bfupd)window.__bfupd();if(x==='y')load()}
+bs[0].onclick=function(){set('y')};bs[1].onclick=function(){set('n')}})();

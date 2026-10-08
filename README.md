@@ -168,3 +168,15 @@ Brugtmarkeds-sektioner på VW ID.7, ID.5, ID. Buzz, Polestar 4, Xpeng P7+ og Zee
 
 ## Opdatering (36)
 Nye modelsider: VW ID.Polo, VW ID.Cross, BMW iX3, Renault 5, Cupra Raval, Born, Formentor, Terramar, Tavascan og Leon. Cupra/formentor-omdirigeringen er fjernet fra .htaccess og slet-workflow. Mærkesider og 'Andre modeller'-lister opdateret. Rettet: VW Golf og Polo manglede forfatterboks og slut-CTA (stod 'None').
+
+## Opdatering (37) – 8. okt. 2026: fuld audit (SEO, GEO, CRO, faktatjek)
+Bygget oven på v36. Estimatmetoden, omdirigeringerne og de omskrevne modelsider er bevaret.
+- /elbil/: omskrevet med kildebelagte tal (Tænks elbiltest jan. 2026: 6.000–10.000 kr., op til 3.777 kr./38 % forskel; Samlino 7.584 mod 5.868 kr.; FDM). Ny title/H1 "Billigste elbil forsikring 2026". Estimattabellen bevaret.
+- /hvad-koster-bilforsikring-gennemsnit/: omskrevet (tomme "ligger typisk på:"-afsnit og fyld fjernet), kildetabel, FAQ. Title/H1 og estimattabel bevaret.
+- /billigste/: tom "Hvad forskellige bilister betaler"-sektion fjernet, Tænk 60 % og FDM-prisstigning i tabellen, FAQ "TJM billigst" → "Bedst i test". Title og kort svar (estimat) uændret.
+- /trods-rki/: orphan-prisnote og ukildet selskabstabel erstattet; BEK 1627/2023 § 1 og § 7-undtagelser; Ankenævnets afgørelse 29.11.2023; CTA-modsigelsen "udfyld ikke onlineformularen" fjernet.
+- /18-aarige/, /unge/: fragmenter fjernet, FDM-kilde (forhøjet selvrisiko under 26 år), selskabstabel uden priser.
+- Selskabssider: tomme pris-sektioner erstattet af ens kildebelagt prisafsnit; ejerforhold (Tryg ejer Alka og TJM, Topdanmark→If, Codan→Alm. Brand, Coop = Købstædernes Forsikring, Forsia kundeejet).
+- Faktarettelser hele sitet: 6.239 kr. = Samlino-data 2024 via FDM; 15.200 kr. = FDM; Ankenævnet 18 % (2025)/20,8 % (2024) i stedet for 22,4 %; gebyr 300 kr.; afgift 42,9 % af præmien ≈ 30 % af prisen; Alkas "bedst placeret" angivet som Alkas egen oplysning.
+- Interne links: kontekstlinks fra modelsider til /hvad-koster-…/, til /pensionist/ og /trods-rki/ fra relevante guides.
+- Teknik: nye assets bf-20261008.css/js (nummerplade accepterer personlige plader og formaterer ved blur, mobilbar sporer cta_click, skjules under cookiebanner, 100dvh-menu), robots-disallows gentaget pr. bot, font-preload af Spline Sans Mono, FAQ-schema genbygget fra synlige spørgsmål, dateModified/lastmod 2026-10-08 kun på ændrede sider.

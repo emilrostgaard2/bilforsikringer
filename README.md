@@ -118,7 +118,7 @@ Omskrevet med danske kilder: Toyota Yaris, BMW 3-serie, Volvo EX40 (dansk kilde 
 
 ## Opdatering (21) – hovedsidetitler
 - Nye titler og H1 med søgeord først: forsiden "Sammenlign bilforsikring", /billigste/ med måned og "fra ca. 2.300 kr./år" (vores estimat for erfaren bilist med ældre bil, står i det korte svar med link til estimaterne), /hvad-koster-…/ som "Bilforsikring pris 2026" med FDM-gennemsnittet.
-- VIGTIGT: /billigste/-titlen indeholder måneden. Opdatér den den 1. i hver måned (title, og:title, description og JSON-LD), ellers ser den forældet ud.
+- (Fjernet 13. okt.: måneden er taget ud af /billigste/-titlen, så den ikke skal opdateres månedligt.)
 
 ## Opdatering (22) – slut-tjek før upload
 - Kort svar øverst på alle 240 indholdssider (før 61). Model-/mærkesider: redaktionelt estimat. Guides: "Kort fortalt"-afsnit flyttet op i boksen eller definitionen fra indledningen. Ordbog og resten: skrevet i hånden uden tal uden kilde.

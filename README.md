@@ -13,7 +13,7 @@ Hele sitet er genereret fra bunden: ny skabelon, nyt design, én CSS-fil og én 
 
 ## Design
 Schibsted Grotesk (hele sitet) + Spline Sans Mono (nummerpladen) – samme skrifter som det oprindelige brand. Farver: navy #1e2b3a, teal #1f7fa3, grøn CTA #1c9a55, lys baggrund #f5f8fb. Afrundede kort (14 px), bløde skygger, mint "Kort svar"-boks med flueben, tillidsmærker under knappen (Gratis, Ingen binding, Tager 2 minutter).
-CTA: nummerpladefelt + grøn knap (hero, midt i artiklen, sticky i højre side på desktop). Formularen sender til FindForsikring med UTM pr. side og placering.
+CTA: nummerpladefelt + grøn knap (hero, midt i artiklen, sticky i højre side på desktop). Formularen sender til Sammenligner.dk med UTM pr. side og placering.
 Menu: dropdowns (Bilforsikring, Målgrupper, Selskaber, Bilmærker) – rene <details>-links, crawlbare uden JS, accordion på mobil.
 Modelnavne i brødteksten linkes automatisk til modelsiderne (maks. 8 pr. side, første forekomst).
 
@@ -180,3 +180,11 @@ Bygget oven på v36. Estimatmetoden, omdirigeringerne og de omskrevne modelsider
 - Faktarettelser hele sitet: 6.239 kr. = Samlino-data 2024 via FDM; 15.200 kr. = FDM; Ankenævnet 18 % (2025)/20,8 % (2024) i stedet for 22,4 %; gebyr 300 kr.; afgift 42,9 % af præmien ≈ 30 % af prisen; Alkas "bedst placeret" angivet som Alkas egen oplysning.
 - Interne links: kontekstlinks fra modelsider til /hvad-koster-…/, til /pensionist/ og /trods-rki/ fra relevante guides.
 - Teknik: nye assets bf-20261008.css/js (nummerplade accepterer personlige plader og formaterer ved blur, mobilbar sporer cta_click, skjules under cookiebanner, 100dvh-menu), robots-disallows gentaget pr. bot, font-preload af Spline Sans Mono, FAQ-schema genbygget fra synlige spørgsmål, dateModified/lastmod 2026-10-08 kun på ændrede sider.
+
+## Opdatering (39) – 20. okt. 2026: ny partner Sammenligner.dk
+- Alle FindForsikring-formularer (hero, midt, slut, højre kolonne) er erstattet af Sammenligner.dk's nummerplade-widget (iframe https://sammenligner.dk/embed/bil-plade-partner/bilforsikringer/stribe/, fast højde 429 px).
+- Højdescriptet (sgHeight) ligger i <head> på alle sider med widget, så rammen tilpasser sig selv.
+- "Prismåling og data: Sammenligner.dk" (rel="sponsored") står én gang pr. side, under den første widget.
+- Mobilbjælken scroller nu til widgetten (#se-pris) i stedet for at linke ud. Inline-links til FindForsikring peger på #se-pris.
+- Alle tekster om partneren (footer, /affiliate-oplysning/, /om-os/, /redaktionel-metode/, llms.txt) siger nu Sammenligner.dk.
+- Assets: bf-20261020.css/js. GA4: klik i en widget måles som cta_click med placement (hero/midt/slut/rail); mobilbjælken som cta_click/mobilbar. cta_submit findes ikke længere (formularen ligger hos partneren).

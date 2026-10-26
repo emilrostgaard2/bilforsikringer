@@ -188,3 +188,21 @@ Bygget oven på v36. Estimatmetoden, omdirigeringerne og de omskrevne modelsider
 - Mobilbjælken scroller nu til widgetten (#se-pris) i stedet for at linke ud. Inline-links til FindForsikring peger på #se-pris.
 - Alle tekster om partneren (footer, /affiliate-oplysning/, /om-os/, /redaktionel-metode/, llms.txt) siger nu Sammenligner.dk.
 - Assets: bf-20261020.css/js. GA4: klik i en widget måles som cta_click med placement (hero/midt/slut/rail); mobilbjælken som cta_click/mobilbar. cta_submit findes ikke længere (formularen ligger hos partneren).
+
+## Opdatering (40) – 26. okt. 2026: teknisk tjek
+- Live-tjek: v39 er live på forsiden, /billigste/, /elbil/, /trods-rki/, /unge/, /18-aarige/, /tjm/, /kaskoforsikring/. UNDTAGELSE: /hvad-koster-bilforsikring-gennemsnit/ serverede stadig v36-versionen (fil ikke overskrevet på serveren).
+- article:modified_time synkroniseret med dateModified på 196 sider (stod på 2026-09-30). Sitemap-lastmod rettet for /bmw/ og /cupra/.
+
+## Opdatering (41) – 26. okt. 2026
+- Serverlog gennemgået: Googlebot, Bingbot, OAI-SearchBot, ChatGPT-User, GPTBot-familien, ClaudeBot og PerplexityBot får alle 200. Kun Baiduspider rammes af Simplys sikkerhedstjek (454).
+- /apple-touch-icon.png lagt i roden (gav 404). .htaccess: dobbelte skråstreger omdirigeres til enkelt.
+
+## Opdatering (42) – 26. okt. 2026: knivskarpe modelsider + målte priser
+- MÅLTE PRISER: Sammenligner.dk (partner) måler priser pr. bilmodel og pr. selskab (sep. 2026, profil 35 år/København Ø/17 skadefri år/15.000 km/selvrisiko 5.000). Data i /home/claude/fix/data/sg_models.py. Indsat som sektion #maalte-priser + sætning i kort svar på 48 model-/mærkesider, 9 selskabssider, /billigste/, /unge/ (19 år) og /pensionist/ (65 år). Selskabsdata CC BY 4.0. Opdatér månedligt fra https://sammenligner.dk/prisindeks/bilforsikring/ og https://sammenligner.dk/bilforsikring/elbil-forsikring/.
+- MODELSIDER: gentaget kontekstafsnit fjernet (99 sider). Estimatnoten er nu én modelspecifik linje. 94 modelsider har fået variant-tabel med danske ny-/brugtpriser og estimat pr. variant (samme åbne metode); profiltabel og kort svar genberegnet fra billigste variant. Ny sektion #prisfaktorer-model med fakta (Euro NCAP, batteri, garanti m.m.) og forsikringsråd med kilder. Research-data: /home/claude/fix/research/*.json. Genbyg: /home/claude/fix/run_models.sh.
+- Uden varianttabel (mangler dansk prisliste): Audi A3, Q3, Q5, Skoda Octavia, VW Caddy.
+- /redaktionel-metode/#maalte forklarer målte priser og kontrol af estimater (snit +5 %, Tesla/Xpeng +20–30 %).
+
+## Opdatering (43)
+- Alle links til sammenligner.dk har nu rel="sponsored noopener" (betalt samarbejde). Før var 101 links almindelige følgede links.
+- (44) Links til sammenligner.dk fjernet fra alle sider undtagen /redaktionel-metode/ (354 links). Kildeangivelser står som tekst; "Kilder"-lister linker internt til /redaktionel-metode/#maalte.

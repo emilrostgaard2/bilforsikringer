@@ -206,3 +206,6 @@ Bygget oven på v36. Estimatmetoden, omdirigeringerne og de omskrevne modelsider
 ## Opdatering (43)
 - Alle links til sammenligner.dk har nu rel="sponsored noopener" (betalt samarbejde). Før var 101 links almindelige følgede links.
 - (44) Links til sammenligner.dk fjernet fra alle sider undtagen /redaktionel-metode/ (354 links). Kildeangivelser står som tekst; "Kilder"-lister linker internt til /redaktionel-metode/#maalte.
+
+## Opdatering (45) – 24. nov. 2026
+- /om-os/: link til søstersiden billigste-bilforsikring.dk (domænenavn som linktekst) ved siden af bilforsakringspriser.se. Kun dette ene sted.
